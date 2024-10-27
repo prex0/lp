@@ -309,6 +309,22 @@ export function LandingPageComponent() {
                 Launch your own Uniswap-like app on mainnet in minutes, powered by AI and blockchain innovation.
               </p>
 
+              <div className="list-disc list-inside text-lg md:text-xl text-gray-300 mb-6 md:mb-8 space-y-4">
+                <div className="flex items-center gap-4">
+                  <Zap className="w-6 h-6" />
+                  <div>Gasless Transactions</div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Key className="w-6 h-6" />
+                  <div>Passkey Wallet</div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Code className="w-6 h-6" />
+                  <div>AI Compatible UI Kit</div>
+                </div>
+              </div>
+
+
               <div className="flex gap-4">
                 <a href="https://swap.prex-app.com" target="_blank" rel="noopener noreferrer" className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center">
                   Demo
