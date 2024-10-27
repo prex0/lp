@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react"
-import { Button } from "@/components/ui/button"
+import React, { useCallback } from "react"
 import ReactFlow, {
   Node,
   Edge,
@@ -30,8 +29,8 @@ const CustomGroup = ({ data }: { data: { width: number; height: number } }) => (
 
 const nodeTypes: NodeTypes = {
   groupNode: CustomGroup,
-  custom: ({ data, style }) => (
-    <div style={style}>{data.label}</div>
+  custom: ({ data }) => (
+    <div>{data.label}</div>
   ),
 }
 
