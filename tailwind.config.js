@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     darkMode: ["class"],
     content: [
     "./index.html",
@@ -53,9 +53,43 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+  		typography: {
+  			DEFAULT: {
+  				css: {
+  					maxWidth: 'none',
+  					color: '#fff',
+  					a: {
+  						color: 'inherit',
+  						textDecoration: 'none',
+  						fontWeight: '500',
+  					},
+  					h1: {
+  						color: '#fff',
+  					},
+  					h2: {
+  						color: '#fff',
+  					},
+  					h3: {
+  						color: '#fff',
+  					},
+  					code: {
+  						color: 'inherit',
+  					},
+  					strong: {
+  						color: '#fff',
+  					},
+  					p: {
+  						color: '#9ca3af',
+  					},
+  				},
+  			},
+  		},
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('@tailwindcss/typography'),
+  ],
 }
 

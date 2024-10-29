@@ -13,6 +13,8 @@ import ReactFlow, {
 } from "reactflow"
 import "reactflow/dist/style.css"
 import { Wallet, Key, FileText, Cog, FileCode, Repeat, Zap, Code } from "lucide-react"
+import { Link } from "react-router-dom"
+import { Header } from "@/components/common/header"
 
 const CustomGroup = ({ data }: { data: { width: number; height: number } }) => (
   <div
@@ -286,18 +288,7 @@ function DarkBusinessFlowDiagram() {
 export function LandingPageComponent() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
-      <header className="bg-black/30 backdrop-blur-sm border-b border-gray-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <span className="text-xl font-light tracking-wide font-inter">PREX</span>
-            <span className="text-sm bg-white/10 px-2 py-1 rounded-md">∞.1</span>
-            <span className="text-sm"><a href="https://docs.prex0.com" target="_blank" rel="noopener noreferrer">Doc</a></span>
-          </div>
-          <a href="https://dashboard.prex0.com" className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center">
-            Dashboard
-          </a>
-        </div>
-      </header>
+      <Header />
       <div className="flex-grow flex items-center justify-center">
         <div className="container mx-auto px-4 py-8 md:py-16 bg-black">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
