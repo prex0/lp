@@ -17,8 +17,6 @@ export function LeftSidebar() {
             title="Manual Installation"
             to="/docs/getting-started/manual"
           />
-          <MenuItem title="Components" to="/docs/components" />
-          <SubMenuItem title="Wallet" to="/docs/components/wallet" />
         </div>
       </nav>
     </div>

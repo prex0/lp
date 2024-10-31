@@ -3,7 +3,7 @@ export function GettingStartedManualPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold mb-4 text-white" id="installation">
-          Installation
+          Manual Installation
         </h1>
         <p className="text-gray-400 text-lg">
           Install and configure Prex with Next.js.
@@ -11,21 +11,9 @@ export function GettingStartedManualPage() {
       </div>
 
       <div className="space-y-4">
-        <h2
-          className="text-2xl font-semibold text-white"
-          id="manual-installation"
-        >
-          Manual installation
-        </h2>
-        <p className="text-gray-300">
-          Clone the Prex repository and install the dependencies:
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        <h3 className="text-xl font-semibold text-white" id="add-dependencies">
+        <h2 className="text-2xl font-semibold text-white" id="add-dependencies">
           Set up shadcn.ui
-        </h3>
+        </h2>
         <p className="text-gray-300">
           Set up shadcn and add the components you need:
         </p>
@@ -38,12 +26,12 @@ npx shadcn@latest add button select input label dialog tooltip`}
       </div>
 
       <div className="space-y-4">
-        <h3
-          className="text-xl font-semibold text-white"
+        <h2
+          className="text-2xl font-semibold text-white"
           id="configure-tailwind"
         >
           Install Prex
-        </h3>
+        </h2>
         <p className="text-gray-300">
           Run the following command to create a tailwind.config.js file:
         </p>
@@ -53,12 +41,12 @@ npx shadcn@latest add button select input label dialog tooltip`}
       </div>
 
       <div className="space-y-4">
-        <h3
-          className="text-xl font-semibold text-white"
+        <h2
+          className="text-2xl font-semibold text-white"
           id="update-tailwind-config"
         >
           Add Providers
-        </h3>
+        </h2>
         <p className="text-gray-300">
           Add the following to your ./app/providers.tsx file:
         </p>
@@ -92,9 +80,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-xl font-semibold text-white" id="update-layout">
+        <h2 className="text-2xl font-semibold text-white" id="update-layout">
           Update layout
-        </h3>
+        </h2>
         <p className="text-gray-300">
           Update the following in your ./app/layout.tsx file:
         </p>
