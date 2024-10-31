@@ -1,3 +1,4 @@
+'use client';
 import { PreviewComponent } from "../preview";
 import { EmbeddedWallet } from "@prex0/uikit/wallet";
 import { Address } from "@prex0/uikit/identity";

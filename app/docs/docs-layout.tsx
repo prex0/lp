@@ -1,20 +1,19 @@
-import { Header } from "../common/header";
-import { LeftSidebar } from "./navigation/left-sidebar";
-import { RightSidebar } from "./navigation/right-sidebar";
+'use client';
+import React from "react";
 import {
   PrexUIKitProvider,
   USDC_TOKEN_ARBITRUM,
   WETH_TOKEN_ARBITRUM,
 } from "@prex0/uikit";
-import { Outlet } from "react-router-dom";
+import { LeftSidebar } from "@/components/docs/navigation/left-sidebar";
+import { RightSidebar } from "@/components/docs/navigation/right-sidebar";
 
-export function DocsLayout() {
+export function DocsLayout({
+  children
+}:{
+  children: React.ReactNode
+}) {
   return (
-    <div className="min-h-screen bg-black">
-      <div className="text-white">
-        <Header />
-      </div>
-
       <div className="min-h-screen bg-black">
         <div className="container mx-auto px-4">
           <div className="flex gap-6">
@@ -28,7 +27,7 @@ export function DocsLayout() {
                   tokens={[USDC_TOKEN_ARBITRUM, WETH_TOKEN_ARBITRUM]}
                   dryRun
                 >
-                  <Outlet />
+                  {children}
                 </PrexUIKitProvider>
               </div>
             </div>
@@ -36,6 +35,5 @@ export function DocsLayout() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

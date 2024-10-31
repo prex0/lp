@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+'use client';
+import { usePathname } from "next/navigation";
 
 interface DocsSidebarItem {
   title: string;
@@ -44,7 +45,7 @@ const manualNavItems: DocsSidebarItem[] = [
 ];
 
 export function RightSidebar() {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   const page = pathname.split("/").pop();
 

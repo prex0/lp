@@ -22,7 +22,6 @@ import {
   Zap,
   Code,
 } from "lucide-react";
-import { Header } from "@/components/common/header";
 
 const CustomGroup = ({ data }: { data: { width: number; height: number } }) => (
   <div

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface DocsSidebarItem {
   title: string;
@@ -37,7 +37,7 @@ function MenuItem({ title, to }: DocsSidebarItem) {
   return (
     <Link
       key={to}
-      to={to}
+      href={to}
       className="block px-3 py-2 text-sm text-gray-200 hover:bg-gray-800 rounded-md"
     >
       {title}
@@ -49,7 +49,7 @@ function SubMenuItem({ title, to }: { title: string; to: string }) {
   return (
     <Link
       key={to}
-      to={to}
+      href={to}
       className="block px-3 py-2 text-sm text-gray-500 hover:bg-gray-800 rounded-md"
     >
       {title}

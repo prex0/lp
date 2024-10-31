@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Header() {
   return (
     <header className="bg-black/30 backdrop-blur-sm border-b border-gray-800/50">
@@ -8,7 +10,7 @@ export function Header() {
           </a>
           <span className="text-sm bg-white/10 px-2 py-1 rounded-md">∞.1</span>
           <span className="text-sm">
-            <a href="/docs/">Doc</a>
+            <Link href="/docs/">Doc</Link>
           </span>
         </div>
         <a

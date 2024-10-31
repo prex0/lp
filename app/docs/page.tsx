@@ -1,11 +1,12 @@
-'use client';
-
 import React from "react";
-import { LandingPageComponent } from "@/components/";
-
+import { DocsLayout } from "./docs-layout";
+import { IntroductionPage } from "@/components/docs/introduction";
+import "@prex0/uikit/styles.css";
 
 export default function Page() {
   return (
-    <LandingPageComponent />
+    <DocsLayout>
+      <IntroductionPage />
+    </DocsLayout>
   );
 }

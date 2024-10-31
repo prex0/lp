@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 export function GettingStartedPage() {
@@ -9,7 +9,7 @@ export function GettingStartedPage() {
       </h1>
 
       <div className="grid grid-cols-2 gap-4">
-        <Link to="/docs/getting-started/nextjs">
+        <Link href="/docs/getting-started/nextjs">
           <Card>
             <CardHeader>
               <CardTitle>Next.js</CardTitle>
@@ -19,7 +19,7 @@ export function GettingStartedPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link to="/docs/getting-started/manual">
+        <Link href="/docs/getting-started/manual">
           <Card>
             <CardHeader>
               <CardTitle>Manual Installation</CardTitle>

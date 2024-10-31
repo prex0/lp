@@ -6,9 +6,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CodeBlock } from "geist/components";
+import { CopyBlock,dracula } from "react-code-blocks";
 
-const code = `function MyComponent(props) {
+const code = `
+function MyComponent(props) {
   return (
     <div>
       <h1>Hello, {props.name}!</h1>
@@ -37,9 +38,11 @@ export function PreviewComponent({ children }: { children: React.ReactNode }) {
         </Card>
       </TabsContent>
       <TabsContent value="code">
-        <CodeBlock aria-label="Hello world" filename="Table.jsx" language="jsx">
-          {code}
-        </CodeBlock>
+      <CopyBlock
+        text={code}
+        language='tsx'
+        theme={dracula}
+        />
       </TabsContent>
     </Tabs>
   );
