@@ -19,7 +19,6 @@ export function LeftSidebar() {
           />
           <MenuItem title="Components" to="/docs/components" />
           <SubMenuItem title="Wallet" to="/docs/components/wallet" />
-          <SubMenuItem title="Transfer" to="/docs/components/transfer" />
         </div>
       </nav>
     </div>
