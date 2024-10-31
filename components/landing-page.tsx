@@ -360,8 +360,8 @@ export function LandingPageComponent() {
               Revolutionize DApp Development
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
-              Launch your own Uniswap-like app on mainnet in minutes, powered
-              by AI and blockchain innovation.
+              Launch your own Uniswap-like app on mainnet in minutes, powered by
+              AI and blockchain innovation.
             </p>
 
             <div className="list-disc list-inside text-lg md:text-xl text-gray-300 mb-6 md:mb-8 space-y-4">

@@ -1,11 +1,14 @@
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBlock from "@/components/docs/preview/CodeBlock";
 
-export function PreviewComponent({ children, code }: { children: React.ReactNode, code: string }) {
+export function PreviewComponent({
+  children,
+  code,
+}: {
+  children: React.ReactNode;
+  code: string;
+}) {
   return (
     <Tabs defaultValue="preview" className="w-full">
       <TabsList className="grid w-full grid-cols-2 w-[400px]">

@@ -9,8 +9,8 @@ import {
 import { AmountFormInput, USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
 import { Input } from "../../ui/input";
 import { Button } from "../../ui/button";
-import { useToast } from "@/hooks/use-toast"
-import { Toaster } from "@/components/ui/toaster"
+import { useToast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 
 const TransferCode = `
 import {
@@ -48,7 +48,7 @@ function CustomButton({ disabled, isLoading, onClick, children }: { disabled?: b
 }`;
 
 export function ComponentsTransferPage() {
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   return (
     <div className="space-y-8">
@@ -64,11 +64,11 @@ export function ComponentsTransferPage() {
           token={USDC_TOKEN_ARBITRUM}
           toAddress="0x0000000000000000000000000000000000000000"
           onSuccess={() => {
-            console.log("Success!")
+            console.log("Success!");
             toast({
               title: "Transfer successful",
               description: "Friday, February 10, 2023 at 5:57 PM",
-            })            
+            });
           }}
         >
           <TransferAmountForm>
@@ -87,10 +87,20 @@ export function ComponentsTransferPage() {
   );
 }
 
-
-export function CustomButton({ disabled, isLoading, onClick, children }: { disabled?: boolean, isLoading?: boolean, onClick?: () => void, children: React.ReactNode }) {
-  return <Button
-    disabled={disabled}
-    onClick={onClick}
-  >{isLoading ? 'Loading...' : children}</Button>
+export function CustomButton({
+  disabled,
+  isLoading,
+  onClick,
+  children,
+}: {
+  disabled?: boolean;
+  isLoading?: boolean;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <Button disabled={disabled} onClick={onClick}>
+      {isLoading ? "Loading..." : children}
+    </Button>
+  );
 }

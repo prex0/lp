@@ -10,13 +10,10 @@ function CopyButton({ code }: Props) {
   return (
     <button className="absolute top-4 right-10 cursor-pointer">
       <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
-        <div>
-          {copied ? <FaRegCheckCircle /> : <FaRegCopy />}
-        </div>
+        <div>{copied ? <FaRegCheckCircle /> : <FaRegCopy />}</div>
       </CopyToClipboard>
     </button>
   );
 }
 
 export default CopyButton;
-

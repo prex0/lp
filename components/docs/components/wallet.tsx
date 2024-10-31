@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { PreviewComponent } from "../preview";
 import { EmbeddedWallet } from "@prex0/uikit/wallet";
 import { Address } from "@prex0/uikit/identity";
@@ -6,7 +6,6 @@ import { Address } from "@prex0/uikit/identity";
 const WalletCode = `<EmbeddedWallet>
   <Address />
 </EmbeddedWallet>`;
-
 
 export function ComponentsWalletPage() {
   return (

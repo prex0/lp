@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check:prettier": "prettier \"app/**/*.tsx\" --check",
-    "fix:prettier": "prettier \"app/**/*.tsx\" --write"
+    "check:prettier": "prettier \"app/**/*.tsx\" \"components/**/*.tsx\" --check",
+    "fix:prettier": "prettier \"app/**/*.tsx\" \"components/**/*.tsx\" --write"
   },
   "dependencies": {
     "@prex0/uikit": "^0.2.4",
