@@ -1,6 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 interface DocsSidebarItem {
-  title: string
-  href: string
+  title: string;
+  href: string;
 }
 
 const introductionNavItems: DocsSidebarItem[] = [
@@ -16,7 +18,7 @@ const introductionNavItems: DocsSidebarItem[] = [
     title: "Prerequisites",
     href: "#prerequisites",
   },
-]
+];
 
 const gettingStartedNavItems: DocsSidebarItem[] = [
   {
@@ -43,23 +45,23 @@ const gettingStartedNavItems: DocsSidebarItem[] = [
     title: "Configure app styles",
     href: "#configure-styles",
   },
-]
+];
 
-interface RightSidebarProps {
-  page: 'introduction' | 'getting-started' | 'features'
-}
+export function RightSidebar() {
+  const { pathname } = useLocation();
 
-export function RightSidebar({ page }: RightSidebarProps) {
+  const page = pathname.split("/").pop();
+
   const getNavItems = () => {
     switch (page) {
-      case 'introduction':
-        return introductionNavItems
-      case 'getting-started':
-        return gettingStartedNavItems
+      case "introduction":
+        return introductionNavItems;
+      case "getting-started":
+        return gettingStartedNavItems;
       default:
-        return []
+        return [];
     }
-  }
+  };
 
   return (
     <div className="w-64 flex-shrink-0 hidden lg:block">
@@ -77,5 +79,5 @@ export function RightSidebar({ page }: RightSidebarProps) {
         </div>
       </nav>
     </div>
-  )
+  );
 }
