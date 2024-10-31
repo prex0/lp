@@ -7,6 +7,7 @@ import {
 } from "@prex0/uikit/transfer";
 import { AmountFormInput, USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
 import { Input } from "../../ui/input";
+import { Button } from "../../ui/button";
 
 export function ComponentsTransferPage() {
   return (
@@ -29,7 +30,9 @@ export function ComponentsTransferPage() {
             </AmountFormInput>
           </TransferAmountForm>
           <TransferError />
-          <TransferButton />
+          <TransferButton>
+            <Button>Transfer</Button>
+          </TransferButton>
         </Transfer>
       </PreviewComponent>
     </div>

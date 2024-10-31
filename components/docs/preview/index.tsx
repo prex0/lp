@@ -6,6 +6,17 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CodeBlock } from "geist/components";
+
+const code = `function MyComponent(props) {
+  return (
+    <div>
+      <h1>Hello, {props.name}!</h1>
+      <p>This is an example React component.</p>
+    </div>
+  );
+}`;
+
 
 export function PreviewComponent({ children }: { children: React.ReactNode }) {
   return (
@@ -26,25 +37,9 @@ export function PreviewComponent({ children }: { children: React.ReactNode }) {
         </Card>
       </TabsContent>
       <TabsContent value="code">
-        <Card>
-          <CardHeader>
-            <CardTitle>Code</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <pre className="bg-gray-900 p-4 rounded-lg">
-              <code className="text-gray-300">
-                {`
-  <Tabs defaultValue="preview" className="w-[400px]">
-    <TabsList className="grid w-full grid-cols-2">
-      <TabsTrigger value="preview">Preview</TabsTrigger>
-      <TabsTrigger value="code">Code</TabsTrigger>
-    </TabsList>
-  </Tabs>
-                `}
-              </code>
-            </pre>
-          </CardContent>
-        </Card>
+        <CodeBlock aria-label="Hello world" filename="Table.jsx" language="jsx">
+          {code}
+        </CodeBlock>
       </TabsContent>
     </Tabs>
   );

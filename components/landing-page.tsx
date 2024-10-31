@@ -353,77 +353,74 @@ function DarkBusinessFlowDiagram() {
 
 export function LandingPageComponent() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
-      <Header />
-      <div className="flex-grow flex items-center justify-center">
-        <div className="container mx-auto px-4 py-8 md:py-16 bg-black">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-            <div className="lg:w-1/2 space-y-6">
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight sm:text-5xl mb-4 md:mb-6">
-                Revolutionize DApp Development
-              </h1>
-              <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
-                Launch your own Uniswap-like app on mainnet in minutes, powered
-                by AI and blockchain innovation.
-              </p>
+    <div className="flex-grow flex items-center justify-center">
+      <div className="container mx-auto px-4 py-8 md:py-16 bg-black">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          <div className="lg:w-1/2 space-y-6">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight sm:text-5xl mb-4 md:mb-6">
+              Revolutionize DApp Development
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
+              Launch your own Uniswap-like app on mainnet in minutes, powered
+              by AI and blockchain innovation.
+            </p>
 
-              <div className="list-disc list-inside text-lg md:text-xl text-gray-300 mb-6 md:mb-8 space-y-4">
-                <div className="flex items-center gap-4">
-                  <Zap className="w-6 h-6" />
-                  <div>Gasless Transactions</div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Key className="w-6 h-6" />
-                  <div>Passkey Wallet</div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Code className="w-6 h-6" />
-                  <div>AI Compatible UI Kit</div>
-                </div>
+            <div className="list-disc list-inside text-lg md:text-xl text-gray-300 mb-6 md:mb-8 space-y-4">
+              <div className="flex items-center gap-4">
+                <Zap className="w-6 h-6" />
+                <div>Gasless Transactions</div>
               </div>
-
-              <div className="flex gap-4">
-                <a
-                  href="https://swap.prex-app.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center"
-                >
-                  Demo
-                </a>
-
-                <a
-                  href="https://dashboard.prex0.com"
-                  className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center"
-                >
-                  Get Started
-                </a>
+              <div className="flex items-center gap-4">
+                <Key className="w-6 h-6" />
+                <div>Passkey Wallet</div>
+              </div>
+              <div className="flex items-center gap-4">
+                <Code className="w-6 h-6" />
+                <div>AI Compatible UI Kit</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 h-[400px] md:h-[500px] mt-8 lg:mt-0">
-              {<DarkBusinessFlowDiagram />}
+
+            <div className="flex gap-4">
+              <a
+                href="https://swap.prex-app.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center"
+              >
+                Demo
+              </a>
+
+              <a
+                href="https://dashboard.prex0.com"
+                className="bg-white/5 text-gray-300 hover:bg-white/10 backdrop-blur-sm border border-gray-700 font-satoshi px-4 py-2 h-10 rounded-md text-base flex items-center justify-center"
+              >
+                Get Started
+              </a>
             </div>
           </div>
+          <div className="w-full lg:w-1/2 h-[400px] md:h-[500px] mt-8 lg:mt-0">
+            {<DarkBusinessFlowDiagram />}
+          </div>
+        </div>
 
-          <div className="mt-16 mb-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FeatureColumn
-                icon={<Zap className="w-8 h-8" />}
-                title="Gasless Transactions"
-                description="Enhance user transaction experience with gasless swaps and link transfers. Designed to be user-friendly, making the use of cryptocurrencies easy for beginners."
-              />
-              <FeatureColumn
-                icon={<Key className="w-8 h-8" />}
-                title="Passkey Wallet"
-                description="Passkey Wallet boasts high usability, balancing security and convenience. Free from complex private key management, enabling smooth transactions."
-              />
-              <FeatureColumn
-                icon={<Code className="w-8 h-8" />}
-                title="AI Compatible UI Kit"
-                description="Provides UI components that are highly compatible with AI development. Significantly improves development efficiency, supporting the rapid construction of innovative DApps."
-              />
-            </div>
+        <div className="mt-16 mb-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <FeatureColumn
+              icon={<Zap className="w-8 h-8" />}
+              title="Gasless Transactions"
+              description="Enhance user transaction experience with gasless swaps and link transfers. Designed to be user-friendly, making the use of cryptocurrencies easy for beginners."
+            />
+            <FeatureColumn
+              icon={<Key className="w-8 h-8" />}
+              title="Passkey Wallet"
+              description="Passkey Wallet boasts high usability, balancing security and convenience. Free from complex private key management, enabling smooth transactions."
+            />
+            <FeatureColumn
+              icon={<Code className="w-8 h-8" />}
+              title="AI Compatible UI Kit"
+              description="Provides UI components that are highly compatible with AI development. Significantly improves development efficiency, supporting the rapid construction of innovative DApps."
+            />
           </div>
         </div>
       </div>

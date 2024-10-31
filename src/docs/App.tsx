@@ -10,7 +10,7 @@ import { GettingStartedManualPage } from "@/components/docs/start/manual";
 import { ComponentsPage } from "@/components/docs/components/index";
 import { ComponentsWalletPage } from "@/components/docs/components/wallet";
 import { ComponentsTransferPage } from "@/components/docs/components/transfer";
-import { DocsLayout } from "../components/docs/layout";
+import { DocsLayout } from "../../components/docs/layout";
 import { RouterProvider } from "react-router-dom";
 
 const docsRouter = createBrowserRouter(
