@@ -1,6 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 interface DocsSidebarItem {
-  title: string
-  href: string
+  title: string;
+  href: string;
 }
 
 const introductionNavItems: DocsSidebarItem[] = [
@@ -16,50 +18,48 @@ const introductionNavItems: DocsSidebarItem[] = [
     title: "Prerequisites",
     href: "#prerequisites",
   },
-]
+];
 
-const gettingStartedNavItems: DocsSidebarItem[] = [
+const manualNavItems: DocsSidebarItem[] = [
   {
     title: "Installation",
     href: "#installation",
   },
   {
-    title: "Create project",
-    href: "#create-project",
+    title: "Set up shadcn",
+    href: "#setup-shadcn",
   },
   {
-    title: "Add dependencies",
-    href: "#add-dependencies",
+    title: "Install Prex",
+    href: "#prex-install",
   },
   {
-    title: "Configure Tailwind CSS",
-    href: "#configure-tailwind",
+    title: "Add Providers",
+    href: "#add-providers",
   },
   {
-    title: "Update tailwind.config.js",
-    href: "#update-tailwind-config",
+    title: "Update layout",
+    href: "#update-layout",
   },
-  {
-    title: "Configure app styles",
-    href: "#configure-styles",
-  },
-]
+];
 
-interface RightSidebarProps {
-  page: 'introduction' | 'getting-started' | 'features'
-}
+export function RightSidebar() {
+  const { pathname } = useLocation();
 
-export function RightSidebar({ page }: RightSidebarProps) {
+  const page = pathname.split("/").pop();
+
+  console.log(page);
+
   const getNavItems = () => {
     switch (page) {
-      case 'introduction':
-        return introductionNavItems
-      case 'getting-started':
-        return gettingStartedNavItems
+      case "introduction":
+        return introductionNavItems;
+      case "manual":
+        return manualNavItems;
       default:
-        return []
+        return [];
     }
-  }
+  };
 
   return (
     <div className="w-64 flex-shrink-0 hidden lg:block">
@@ -77,5 +77,5 @@ export function RightSidebar({ page }: RightSidebarProps) {
         </div>
       </nav>
     </div>
-  )
+  );
 }

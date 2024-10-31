@@ -9,4 +9,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  appType: 'mpa',
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        docs: path.resolve(__dirname, 'docs/index.html'),
+      },
+    },
+  },
 })
