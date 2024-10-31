@@ -11,7 +11,7 @@ export function GettingStartedManualPage() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white" id="add-dependencies">
+        <h2 className="text-2xl font-semibold text-white" id="setup-shadcn">
           Set up shadcn.ui
         </h2>
         <p className="text-gray-300">
@@ -26,10 +26,7 @@ npx shadcn@latest add button select input label dialog tooltip`}
       </div>
 
       <div className="space-y-4">
-        <h2
-          className="text-2xl font-semibold text-white"
-          id="configure-tailwind"
-        >
+        <h2 className="text-2xl font-semibold text-white" id="prex-install">
           Install Prex
         </h2>
         <p className="text-gray-300">
@@ -41,10 +38,7 @@ npx shadcn@latest add button select input label dialog tooltip`}
       </div>
 
       <div className="space-y-4">
-        <h2
-          className="text-2xl font-semibold text-white"
-          id="update-tailwind-config"
-        >
+        <h2 className="text-2xl font-semibold text-white" id="add-providers">
           Add Providers
         </h2>
         <p className="text-gray-300">
@@ -103,22 +97,6 @@ import { Providers } from './providers';
   </body>
 </html>
 `}
-          </code>
-        </pre>
-      </div>
-
-      <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white" id="configure-styles">
-          Configure app styles
-        </h2>
-        <p className="text-gray-300">
-          Add the following to your ./src/index.css file:
-        </p>
-        <pre className="bg-gray-900 p-4 rounded-lg">
-          <code className="text-gray-300">
-            {`@tailwind base;
-@tailwind components;
-@tailwind utilities;`}
           </code>
         </pre>
       </div>

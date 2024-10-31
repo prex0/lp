@@ -20,30 +20,26 @@ const introductionNavItems: DocsSidebarItem[] = [
   },
 ];
 
-const gettingStartedNavItems: DocsSidebarItem[] = [
+const manualNavItems: DocsSidebarItem[] = [
   {
     title: "Installation",
     href: "#installation",
   },
   {
-    title: "Create project",
-    href: "#create-project",
+    title: "Set up shadcn",
+    href: "#setup-shadcn",
   },
   {
-    title: "Add dependencies",
-    href: "#add-dependencies",
+    title: "Install Prex",
+    href: "#prex-install",
   },
   {
-    title: "Configure Tailwind CSS",
-    href: "#configure-tailwind",
+    title: "Add Providers",
+    href: "#add-providers",
   },
   {
-    title: "Update tailwind.config.js",
-    href: "#update-tailwind-config",
-  },
-  {
-    title: "Configure app styles",
-    href: "#configure-styles",
+    title: "Update layout",
+    href: "#update-layout",
   },
 ];
 
@@ -52,12 +48,14 @@ export function RightSidebar() {
 
   const page = pathname.split("/").pop();
 
+  console.log(page);
+
   const getNavItems = () => {
     switch (page) {
       case "introduction":
         return introductionNavItems;
-      case "getting-started":
-        return gettingStartedNavItems;
+      case "manual":
+        return manualNavItems;
       default:
         return [];
     }
