@@ -9,7 +9,7 @@ export function GettingStartedPage() {
       </h1>
 
       <div className="grid grid-cols-2 gap-4">
-        <Link href="/docs/getting-started/nextjs">
+        <Link href="/docs/start/nextjs">
           <Card>
             <CardHeader>
               <CardTitle>Next.js</CardTitle>
@@ -19,7 +19,7 @@ export function GettingStartedPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link href="/docs/getting-started/manual">
+        <Link href="/docs/start/manual">
           <Card>
             <CardHeader>
               <CardTitle>Manual Installation</CardTitle>

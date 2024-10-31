@@ -1,10 +1,10 @@
-import { Header } from "../components/common/header"
-import "./global.css"
+import { Header } from "../components/common/header";
+import "./global.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -18,7 +18,7 @@ export default function RootLayout({
           content="Prex is a platform for building decentralized applications (DApps) on the Ethereum blockchain. It provides a suite of tools and services to streamline the development process and make it more efficient."
         />
       </head>
-      <body>
+      <body className="dark">
         <div id="root">
           <div className="min-h-screen bg-black text-white flex flex-col">
             <Header />
@@ -27,5 +27,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }

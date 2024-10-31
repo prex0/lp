@@ -1,12 +1,11 @@
 import React from "react";
 import { DocsLayout } from "../../docs-layout";
-import { ComponentsWalletPage } from "@/components/docs/components/wallet";
-import "../../../global.css";
+import { GettingStartedNextjsPage } from "@/components/docs/start/nextjs";
 
 export default function Page() {
   return (
     <DocsLayout>
-      <ComponentsWalletPage />
+      <GettingStartedNextjsPage />
     </DocsLayout>
   );
 }

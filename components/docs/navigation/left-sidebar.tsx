@@ -11,8 +11,8 @@ export function LeftSidebar() {
       <nav className="sticky top-16 pt-16">
         <div className="space-y-1">
           <MenuItem title="Introduction" to="/docs" />
-          <MenuItem title="Getting Started" to="/docs/getting-started" />
-          <SubMenuItem title="Next.js" to="/docs/getting-started/nextjs" />
+          <MenuItem title="Getting Started" to="/docs/start" />
+          <SubMenuItem title="Next.js" to="/docs/start/nextjs" />
           <SubMenuItem
             title="Manual Installation"
             to="/docs/getting-started/manual"
