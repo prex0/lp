@@ -17,6 +17,7 @@ export function LeftSidebar() {
           <MenuItem title="Components" to="/docs/components" />
           <SubMenuItem title="Address" to="/docs/components/address" />
           <SubMenuItem title="Pay" to="/docs/components/pay" />
+          <SubMenuItem title="Swap" to="/docs/components/swap" />
         </div>
       </nav>
     </div>
