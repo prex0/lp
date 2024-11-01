@@ -10,7 +10,7 @@ export function Header() {
           </a>
           <span className="text-sm bg-white/10 px-2 py-1 rounded-md">∞.1</span>
           <span className="text-sm">
-            <Link href="https://docs.prex0.com">Doc</Link>
+            <Link href="/docs">Doc</Link>
           </span>
         </div>
         <a
