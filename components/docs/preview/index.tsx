@@ -11,7 +11,7 @@ export function PreviewComponent({
 }) {
   return (
     <Tabs defaultValue="preview" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 w-[400px]">
+      <TabsList className="grid w-full grid-cols-2 min-w-[320px] max-w-[320px] md:max-w-[400px]">
         <TabsTrigger value="preview">Preview</TabsTrigger>
         <TabsTrigger value="code">Code</TabsTrigger>
       </TabsList>
