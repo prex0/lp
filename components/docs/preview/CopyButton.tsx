@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FaRegCheckCircle, FaRegCopy } from "react-icons/fa";

@@ -1,3 +1,5 @@
+import CodeBlock from "../preview/CodeBlock";
+
 export function GettingStartedNextjsPage() {
   return (
     <div className="space-y-8">
@@ -15,9 +17,11 @@ export function GettingStartedNextjsPage() {
           Create project
         </h2>
         <p className="text-gray-300">Start by creating a new Prex project:</p>
-        <pre className="bg-gray-900 p-4 rounded-lg">
-          <code className="text-gray-300">npm create prex@latest</code>
-        </pre>
+        <CodeBlock
+          language="bash"
+          code={"npm create prex@latest"}
+          showLineNumbers={false}
+        />
       </div>
     </div>
   );
