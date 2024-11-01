@@ -7,7 +7,6 @@ import {
   SwapBalance,
   SwapTokenSelector,
   SwapAmountForm,
-  SwapSucc,
 } from "@prex0/uikit/swap";
 
 import {
