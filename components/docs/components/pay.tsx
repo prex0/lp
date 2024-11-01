@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { useCallback, useState } from "react";
 import { PreviewComponent } from "../preview";
+import { Spinner } from "../../common/spinner";
 
 const TransferCode = `"use client";
 
@@ -139,6 +140,9 @@ export function PayExample() {
           )}
         </Transfer>
         <Toaster />
+      </div>
+      <div className="hidden">
+        <Spinner />
       </div>
     </PreviewComponent>
   );
