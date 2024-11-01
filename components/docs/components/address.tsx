@@ -14,9 +14,14 @@ export function AddressExample() {
   const { toast } = useToast();
   return (
     <div>
-      <EmbeddedWallet>
-        <Address onCopied={() => toast({ title: 'Copied to clipboard' })} />
-      </EmbeddedWallet>
+      <div className="space-y-3">
+        <MyCode />
+        <div className="flex justify-center items-center">
+          <Address
+            onCopied={() => toast({ title: "Copied to clipboard" })}
+          />
+        </div>
+      </div>
       <Toaster />
     </div>
   )

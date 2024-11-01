@@ -125,9 +125,9 @@ export function PayExample() {
         >
           {isSuccess ? (
             <>
-              <div onClick={() => setIsSuccess(false)}>
+              <div onClick={() => setIsSuccess(false)} className="text-sm">
                 Succeed to pay <TransferAmount showSymbol /> to{" "}
-                <TransferRecipient /> check <CustomTransferTxLink />
+                <TransferRecipient />! <CustomTransferTxLink />
               </div>
             </>
           ) : (
@@ -162,7 +162,7 @@ function CustomTransferTxLink() {
       target="_blank"
       rel="noreferrer"
     >
-      explorer
+      Check explorer!
     </a>
   );
 }

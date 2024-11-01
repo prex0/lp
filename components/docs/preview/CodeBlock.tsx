@@ -27,12 +27,18 @@ export default function CodeBlock({
         customStyle={{
           backgroundColor: "rgb(17 24 39)",
         }}
+        lineProps={{
+          style: {
+            wordBreak: "break-all",
+            whiteSpace: "pre-wrap",
+          },
+        }}
         language={language}
         style={vscDarkPlus}
         wrapLines={true}
         wrapLongLines={true}
-        showLineNumbers={showLineNumbers}
-        showInlineLineNumbers={false}
+        showLineNumbers={false}
+        showInlineLineNumbers={true}
       >
         {code}
       </SyntaxHighlighter>
