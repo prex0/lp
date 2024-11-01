@@ -13,10 +13,10 @@ export function LeftSidebar() {
           <MenuItem title="Introduction" to="/docs" />
           <MenuItem title="Getting Started" to="/docs/start" />
           <SubMenuItem title="Next.js" to="/docs/start/nextjs" />
-          <SubMenuItem
-            title="Manual Installation"
-            to="/docs/getting-started/manual"
-          />
+          <SubMenuItem title="Manual Installation" to="/docs/start/manual" />
+          <MenuItem title="Components" to="/docs/components" />
+          <SubMenuItem title="Address" to="/docs/components/address" />
+          <SubMenuItem title="Pay" to="/docs/components/pay" />
         </div>
       </nav>
     </div>

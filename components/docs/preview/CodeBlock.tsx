@@ -6,18 +6,32 @@ import {
   vscDarkPlus,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
-SyntaxHighlighter.registerLanguage("jsx", jsx);
+import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 
-export default function CodeBlock({ code }: { code: string }) {
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("bash", bash);
+
+export default function CodeBlock({
+  code,
+  language = "jsx",
+  showLineNumbers = true,
+}: {
+  code: string;
+  language?: string;
+  showLineNumbers?: boolean;
+}) {
   return (
     <div className="relative">
       <CopyButton code={code} />
       <SyntaxHighlighter
-        language={"jsx"}
+        customStyle={{
+          backgroundColor: "rgb(17 24 39)",
+        }}
+        language={language}
         style={vscDarkPlus}
         wrapLines={true}
         wrapLongLines={true}
-        showLineNumbers={true}
+        showLineNumbers={showLineNumbers}
         showInlineLineNumbers={false}
       >
         {code}

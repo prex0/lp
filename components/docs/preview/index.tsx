@@ -17,7 +17,7 @@ export function PreviewComponent({
       </TabsList>
       <TabsContent value="preview" className="w-full">
         <Card className="p-2">
-          <CardContent className="flex justify-center items-center">
+          <CardContent className="flex justify-center items-center min-h-[200px] p-5">
             {children}
           </CardContent>
         </Card>
