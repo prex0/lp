@@ -1,4 +1,4 @@
-import CodeBlock from "../preview/CodeBlock";
+import CodeBlock from "../preview/code-block";
 
 const code = `'use client';
 import { PrexUIKitProvider, USDC_TOKEN_ARBITRUM, WETH_TOKEN_ARBITRUM } from "@prex0/uikit";

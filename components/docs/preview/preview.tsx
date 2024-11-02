@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CodeBlock from "@/components/docs/preview/CodeBlock";
+import CodeBlock from "@/components/docs/preview/code-block";
 
 export function PreviewComponent({
   children,

@@ -1,7 +1,6 @@
 "use client";
-import { PreviewComponent } from "../preview";
+import { PreviewComponent } from "../preview/preview";
 import { Address, MyCode } from "@prex0/uikit/identity";
-import { EmbeddedWallet } from "@prex0/uikit/wallet";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 
