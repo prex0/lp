@@ -22,6 +22,7 @@ export default function CodeBlock({
       <SyntaxHighlighter
         customStyle={{
           backgroundColor: "rgb(17 24 39)",
+          borderRadius: "10px",
         }}
         lineProps={{
           style: {

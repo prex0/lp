@@ -116,7 +116,7 @@ export function PayExample() {
 
   return (
     <PreviewComponent code={TransferCode}>
-      <div>
+      <div className="w-80">
         <Transfer
           token={USDC_TOKEN_ARBITRUM}
           toAddress="0x0000000000000000000000000000000000000000"
