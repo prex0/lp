@@ -9,8 +9,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <DocSidebar />
-      <main>
-        <SidebarTrigger />
+      <main className="w-full">
+        <SidebarTrigger className="sticky top-16" />
         <DocsLayout>{children}</DocsLayout>
       </main>
     </SidebarProvider>

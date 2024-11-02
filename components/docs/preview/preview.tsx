@@ -11,13 +11,13 @@ export function PreviewComponent({
 }) {
   return (
     <Tabs defaultValue="preview" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 w-[240px]">
+      <TabsList className="grid grid-cols-2 w-[240px]">
         <TabsTrigger value="preview">Preview</TabsTrigger>
         <TabsTrigger value="code">Code</TabsTrigger>
       </TabsList>
       <TabsContent value="preview" className="w-full">
-        <Card className="p-2">
-          <CardContent className="flex justify-center items-center min-h-[200px] p-5">
+        <Card className="p-2 w-full">
+          <CardContent className="flex justify-center items-center w-full min-h-[200px] p-5">
             {children}
           </CardContent>
         </Card>
