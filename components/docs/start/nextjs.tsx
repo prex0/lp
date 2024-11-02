@@ -1,4 +1,4 @@
-import CodeBlock from "../preview/CodeBlock";
+import CodeBlock from "../preview/code-block";
 
 export function GettingStartedNextjsPage() {
   return (

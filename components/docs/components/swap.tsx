@@ -27,7 +27,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Info, Zap } from "lucide-react";
-import { PreviewComponent } from "../preview";
+import { PreviewComponent } from "../preview/preview";
 import { useCallback } from "react";
 
 const SwapCode = `"use client";

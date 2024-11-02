@@ -1,10 +1,7 @@
 import * as React from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import CopyButton from "./CopyButton";
-import {
-  vsDark,
-  vscDarkPlus,
-} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import CopyButton from "./copy-button";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 
@@ -14,7 +11,6 @@ SyntaxHighlighter.registerLanguage("bash", bash);
 export default function CodeBlock({
   code,
   language = "jsx",
-  showLineNumbers = true,
 }: {
   code: string;
   language?: string;
