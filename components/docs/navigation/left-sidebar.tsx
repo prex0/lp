@@ -35,7 +35,9 @@ export function LeftSidebar() {
         <SidebarGroupContent>
           <SidebarMenu>
             <SubMenuItem title="Address" to="/docs/components/address" />
+            <SubMenuItem title="Token Balance" to="/docs/components/balance" />
             <SubMenuItem title="Pay" to="/docs/components/pay" />
+            <SubMenuItem title="Transfer" to="/docs/components/transfer" />
             <SubMenuItem title="Swap" to="/docs/components/swap" />
           </SidebarMenu>
         </SidebarGroupContent>
@@ -47,7 +49,7 @@ export function LeftSidebar() {
 function SubMenuItem({ title, to }: { title: string; to: string }) {
   return (
     <SidebarMenuItem>
-      <SidebarMenuButton>
+      <SidebarMenuButton asChild>
         <Link
           key={to}
           href={to}

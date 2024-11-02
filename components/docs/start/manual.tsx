@@ -23,40 +23,26 @@ export function Providers({ children }: { children: React.ReactNode }) {
   );
 }
 `;
-const TransferCode = `
-import {
-  Transfer,
-  TransferAmountForm,
-  TransferError,
-  TransferButton,
-} from "@prex0/uikit/transfer";
-import { AmountFormInput, USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-\n
-export function TransferComponent() {
-  return (<Transfer
-    token={USDC_TOKEN_ARBITRUM}
-    toAddress="0x0000000000000000000000000000000000000000"
-  >
-    <TransferAmountForm>
-      <AmountFormInput>
-        <Input />
-      </AmountFormInput>
-    </TransferAmountForm>
-    <TransferError />
-    <TransferButton>
-      <CustomButton>Transfer</CustomButton>
-    </TransferButton>
-  </Transfer>)
-}
 
-function CustomButton({ disabled, isLoading, onClick, children }: { disabled?: boolean, isLoading?: boolean, onClick?: () => void, children: React.ReactNode }) {
-  return <Button
-    disabled={disabled}
-    onClick={onClick}
-  >{isLoading ? 'Loading...' : children}</Button>
-}`;
+const layoutCode = `import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "@prex0/uikit/styles.css";
+import "./globals.css";
+import { Providers } from "./providers";
+
+...
+
+<html lang="en">
+  <body
+    className={\`\${geistSans.variable} \${geistMono.variable} antialiased\`}
+  >
+    <Providers>
+      {children}
+    </Providers>
+  </body>
+</html>
+`;
+
 export function GettingStartedManualPage() {
   return (
     <div className="space-y-8">
@@ -110,30 +96,32 @@ npx shadcn@latest add button select input label dialog tooltip`}
 
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-white" id="update-layout">
+          Update package.json
+        </h2>
+        <p className="text-gray-300">
+          Update the following in your ./package.json file:
+        </p>
+        <pre className="bg-gray-900 p-4 rounded-lg">
+          <code className="text-gray-300">
+            {`...
+  "scripts": {
+    "dev": "NEXT_PUBLIC_DRY_RUN=true next dev",
+...
+`}
+          </code>
+        </pre>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white" id="update-layout">
           Update layout
         </h2>
         <p className="text-gray-300">
           Update the following in your ./app/layout.tsx file:
         </p>
-        <pre className="bg-gray-900 p-4 rounded-lg">
-          <code className="text-gray-300">
-            {`
-import { Providers } from './providers';
-
-...
-
-<html lang="en">
-  <body
-    className={\`\${geistSans.variable} \${geistMono.variable} antialiased dark\`}
-  >
-    <Providers>
-      {children}
-    </Providers>
-  </body>
-</html>
-`}
-          </code>
-        </pre>
+        <div>
+          <CodeBlock language="jsx" code={layoutCode} showLineNumbers={false} />
+        </div>
       </div>
     </div>
   );
