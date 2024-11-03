@@ -94,6 +94,13 @@
     @apply bg-background text-foreground;
   }
 
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+  }
+
   code {
     counter-reset: line;
   }

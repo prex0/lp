@@ -1,6 +1,6 @@
 "use client";
 
-import { TransferCard, TransferSuccess } from "@prex0/uikit/transfer";
+import { RichTransferCard, TransferSuccess } from "@prex0/uikit/transfer";
 import { USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
@@ -8,7 +8,7 @@ import { useCallback } from "react";
 import { PreviewComponent } from "../preview/preview";
 
 const TransferCode = `import {
-  TransferCard,
+  RichTransferCard,
   TransferSuccess
 } from "@prex0/uikit/transfer";
 import { USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
@@ -16,7 +16,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { useCallback } from "react";
 
-export function TransferExample() {
+export function RichTransferExample() {
   const { toast } = useToast();
 
   const onSuccess = useCallback(
@@ -39,9 +39,8 @@ export function TransferExample() {
 
   return (
     <div>
-      <TransferCard
+      <RichTransferCard
         token={USDC_TOKEN_ARBITRUM}
-        toAddress="0xa234567890123000000000000000000000000002"
         amount=""
         onSuccess={onSuccess}
       />
@@ -49,7 +48,7 @@ export function TransferExample() {
     </div>
   );`;
 
-export function TransferCardExample() {
+export function RichTransferCardExample() {
   const { toast } = useToast();
 
   const onSuccess = useCallback(
@@ -73,9 +72,8 @@ export function TransferCardExample() {
   return (
     <PreviewComponent code={TransferCode}>
       <div className="w-[320px]">
-        <TransferCard
+        <RichTransferCard
           token={USDC_TOKEN_ARBITRUM}
-          toAddress="0xa234567890123000000000000000000000000002"
           amount=""
           onSuccess={onSuccess}
         />

@@ -2,7 +2,7 @@
 
 import {
   Transfer,
-  TransferError,
+  TransferMessage,
   TransferButton,
   TransferAmount,
   TransferSuccess,
@@ -89,7 +89,7 @@ export function PayExample() {
           <TransferButton>
             Pay <TransferAmount showSymbol />
           </TransferButton>
-          <TransferError />
+          <TransferMessage />
         </Transfer>
         <Toaster />
       </div>
