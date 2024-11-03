@@ -42,6 +42,15 @@ export function LeftSidebar() {
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
+      <SidebarGroup>
+        <SidebarGroupLabel>Cards</SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            <SubMenuItem title="Transfer" to="/docs/cards/transfer" />
+            <SubMenuItem title="Swap" to="/docs/cards/swap" />
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
     </>
   );
 }
