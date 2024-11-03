@@ -5,14 +5,12 @@ import {
   TransferError,
   TransferButton,
   TransferAmount,
-  TransferRecipient,
   TransferSuccess,
-  useTransferContext,
 } from "@prex0/uikit/transfer";
 import { USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { PreviewComponent } from "../preview/preview";
 import { Spinner } from "../../common/spinner";
 
@@ -23,26 +21,22 @@ import {
   TransferError,
   TransferButton,
   TransferAmount,
-  TransferRecipient,
   TransferSuccess,
-  useTransferContext
 } from "@prex0/uikit/transfer";
 import { USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 
 export function PayExample() {
   const { toast } = useToast();
-  const [isSuccess, setIsSuccess] = useState(false)
 
   const onSuccess = useCallback((e: TransferSuccess) => {
-    setIsSuccess(true)
     toast({
       title: "Transfer successful",
       description: <p>Succeed to Pay \${e.amount} \${e.token.symbol} to \${e.toAddress}, check <a href={e.explorerUrl} className="underline pointer-cursor">explorer</a></p>,
     })
-  }, [setIsSuccess, toast])
+  }, [toast])
   
   return (
     <div>
@@ -52,52 +46,21 @@ export function PayExample() {
         amount="10"
         onSuccess={onSuccess}
       >
-        {
-          isSuccess ? (
-            <>
-              <div>
-                Succeed to pay{' '}
-                <TransferAmount showSymbol />
-                {' '}to{' '}
-                <TransferRecipient />
-                {' '}check{' '}
-                <CustomTransferTxLink />
-                </div>
-            </>
-          ) : (
-            <>
-              <TransferButton>
-                Pay <TransferAmount showSymbol />
-              </TransferButton>
-              <TransferError />
-            </>
-          )
-        }
+        <TransferButton>
+          Pay <TransferAmount showSymbol />
+        </TransferButton>
+        <TransferError />
       </Transfer>
       <Toaster />
     </div>
-  )
-}
-
-function CustomTransferTxLink() {
-  const { lifeCycleStatus } = useTransferContext()
-
-  if(lifeCycleStatus.statusName !== 'success') {
-    return null
-  }
-
-  return(
-    <a href={lifeCycleStatus.statusData.explorerUrl} className="underline">explorer</a>
   )
 }`;
 
 export function PayExample() {
   const { toast } = useToast();
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const onSuccess = useCallback(
     (e: TransferSuccess) => {
-      setIsSuccess(true);
       toast({
         title: "Transfer successful",
         description: (
@@ -111,7 +74,7 @@ export function PayExample() {
         ),
       });
     },
-    [setIsSuccess, toast]
+    [toast]
   );
 
   return (
@@ -123,21 +86,10 @@ export function PayExample() {
           amount="10"
           onSuccess={onSuccess}
         >
-          {isSuccess ? (
-            <>
-              <div onClick={() => setIsSuccess(false)} className="text-sm">
-                Succeed to pay <TransferAmount showSymbol /> to{" "}
-                <TransferRecipient />! <CustomTransferTxLink />
-              </div>
-            </>
-          ) : (
-            <>
-              <TransferButton>
-                Pay <TransferAmount showSymbol />
-              </TransferButton>
-              <TransferError />
-            </>
-          )}
+          <TransferButton>
+            Pay <TransferAmount showSymbol />
+          </TransferButton>
+          <TransferError />
         </Transfer>
         <Toaster />
       </div>
@@ -145,24 +97,5 @@ export function PayExample() {
         <Spinner />
       </div>
     </PreviewComponent>
-  );
-}
-
-function CustomTransferTxLink() {
-  const { lifeCycleStatus } = useTransferContext();
-
-  if (lifeCycleStatus.statusName !== "success") {
-    return null;
-  }
-
-  return (
-    <a
-      href={lifeCycleStatus.statusData.explorerUrl}
-      className="underline"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Check explorer!
-    </a>
   );
 }
