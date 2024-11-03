@@ -4,67 +4,33 @@ import {
   Transfer,
   TransferAmountForm,
   TransferMessage,
-  TransferButton,
+  TransferCreateLinkButton,
   TransferAmount,
   TransferTokenName,
-  TransferSuccess,
-  TransferRecipientInput,
 } from "@prex0/uikit/transfer";
 import { AmountFormSimpleInput, USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
-import { useToast } from "@/hooks/use-toast";
-import { Toaster } from "@/components/ui/toaster";
-import { useCallback } from "react";
 import { PreviewComponent } from "../preview/preview";
 
 const TransferCode = `import {
   Transfer,
   TransferAmountForm,
-  TransferError,
-  TransferButton,
+  TransferMessage,
+  TransferCreateLinkButton,
   TransferAmount,
   TransferTokenName,
-  TransferSuccess,
-  TransferRecipientInput,
 } from "@prex0/uikit/transfer";
 import { AmountFormSimpleInput, USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
-import { useToast } from "@/hooks/use-toast";
-import { Toaster } from "@/components/ui/toaster";
-import { useCallback } from "react";
 
-export function TransferExample() {
-  const { toast } = useToast();
-
-  const onSuccess = useCallback(
-    (e: TransferSuccess) => {
-      toast({
-        title: "Transfer successful",
-        description: (
-          <p>
-            Succeed to Pay \${e.amount} \${e.token.symbol} to \${e.toAddress},
-            check{" "}
-            <a href={e.explorerUrl} className="underline pointer-cursor">
-              explorer
-            </a>
-          </p>
-        ),
-      });
-    },
-    [toast]
-  );
-
+export function LinkTransferExample() {
   return (
-    <div>
+    <div className="w-[316px]">
       <Transfer
         token={USDC_TOKEN_ARBITRUM}
         toAddress="0xa234567890123000000000000000000000000002"
         amount=""
-        onSuccess={onSuccess}
+        mode="link"
       >
         <div className="flex flex-col gap-4">
-          <div className="space-y-2">
-            <div className="text-xs text-muted-foreground">To Address</div>
-            <TransferRecipientInput />
-          </div>
           <div className="space-y-2">
             <div className="text-xs text-muted-foreground">Token</div>
             <div className="flex justify-end items-center gap-2">
@@ -78,37 +44,17 @@ export function TransferExample() {
             </TransferAmountForm>
           </div>
 
-          <TransferButton>
-            Transfer <TransferAmount showSymbol />
-          </TransferButton>
-          <TransferError />
+          <TransferCreateLinkButton>
+            Create Link for <TransferAmount showSymbol />
+          </TransferCreateLinkButton>
+          <TransferMessage />
         </div>
       </Transfer>
-      <Toaster />
     </div>
-  );`;
-
-export function TransferExample() {
-  const { toast } = useToast();
-
-  const onSuccess = useCallback(
-    (e: TransferSuccess) => {
-      toast({
-        title: "Transfer successful",
-        description: (
-          <p>
-            Succeed to Pay ${e.amount} ${e.token.symbol} to ${e.toAddress},
-            check{" "}
-            <a href={e.explorerUrl} className="underline pointer-cursor">
-              explorer
-            </a>
-          </p>
-        ),
-      });
-    },
-    [toast]
   );
+}`;
 
+export function LinkTransferExample() {
   return (
     <PreviewComponent code={TransferCode}>
       <div className="w-[316px]">
@@ -116,13 +62,9 @@ export function TransferExample() {
           token={USDC_TOKEN_ARBITRUM}
           toAddress="0xa234567890123000000000000000000000000002"
           amount=""
-          onSuccess={onSuccess}
+          mode="link"
         >
           <div className="flex flex-col gap-4">
-            <div className="space-y-2">
-              <div className="text-xs text-muted-foreground">To Address</div>
-              <TransferRecipientInput />
-            </div>
             <div className="space-y-2">
               <div className="text-xs text-muted-foreground">Token</div>
               <div className="flex justify-end items-center gap-2">
@@ -136,13 +78,12 @@ export function TransferExample() {
               </TransferAmountForm>
             </div>
 
-            <TransferButton>
-              Transfer <TransferAmount showSymbol />
-            </TransferButton>
+            <TransferCreateLinkButton>
+              Create Link for <TransferAmount showSymbol />
+            </TransferCreateLinkButton>
             <TransferMessage />
           </div>
         </Transfer>
-        <Toaster />
       </div>
     </PreviewComponent>
   );

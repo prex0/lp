@@ -38,6 +38,10 @@ export function LeftSidebar() {
             <SubMenuItem title="Token Balance" to="/docs/components/balance" />
             <SubMenuItem title="Pay" to="/docs/components/pay" />
             <SubMenuItem title="Transfer" to="/docs/components/transfer" />
+            <SubMenuItem
+              title="Link Transfer"
+              to="/docs/components/link-transfer"
+            />
             <SubMenuItem title="Swap" to="/docs/components/swap" />
           </SidebarMenu>
         </SidebarGroupContent>
@@ -47,6 +51,7 @@ export function LeftSidebar() {
         <SidebarGroupContent>
           <SidebarMenu>
             <SubMenuItem title="Transfer" to="/docs/cards/transfer" />
+            <SubMenuItem title="Rich Transfer" to="/docs/cards/rich" />
             <SubMenuItem title="Swap" to="/docs/cards/swap" />
           </SidebarMenu>
         </SidebarGroupContent>
