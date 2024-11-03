@@ -1,4 +1,5 @@
 import { Header } from "../components/common/header";
+import "@prex0/uikit/styles.css";
 import "./global.css";
 
 export default function RootLayout({
