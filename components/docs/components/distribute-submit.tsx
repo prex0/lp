@@ -36,7 +36,7 @@ import {
 } from '@prex0/uikit/distribute'
 
 function getURL() {
-  return \`${window.location.origin}/distribute/receive\`
+  return \`\${window.location.origin}/docs/components/distribute\`
 }
 
 export const DistributeSubmitExample = () => {
