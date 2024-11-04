@@ -24,7 +24,6 @@ const ClaimCode = `import {
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { useCallback } from "react";
-import { PreviewComponent } from "../preview/preview";
 
 export function ClaimExample() {
   const { toast } = useToast();
@@ -44,28 +43,26 @@ export function ClaimExample() {
   );
 
   return (
-    <PreviewComponent code={TransferCode}>
-      <div className="w-[316px]">
-        <LinkReceive
-          onSuccess={onSuccess}
-        >
-          <div>
-            <LinkReceiveAmount showSymbol />
-          </div>
-          <div>
-            Sender: <LinkReceiveSender />
-          </div>
-          <div>
-            Expiry: <LinkReceiveExpiration format={(timestamp) => new Date(timestamp * 1000).toLocaleString()} />
-          </div>
-          <LinkReceiveError />
-          <LinkReceiveButton>
-            Claim
-          </LinkReceiveButton>
-        </LinkReceive>
-        <Toaster />
-      </div>
-    </PreviewComponent>
+    <div className="w-[316px]">
+      <LinkReceive
+        onSuccess={onSuccess}
+      >
+        <div>
+          <LinkReceiveAmount showSymbol />
+        </div>
+        <div>
+          Sender: <LinkReceiveSender />
+        </div>
+        <div>
+          Expiry: <LinkReceiveExpiration format={(timestamp) => new Date(timestamp * 1000).toLocaleString()} />
+        </div>
+        <LinkReceiveError />
+        <LinkReceiveButton>
+          Claim
+        </LinkReceiveButton>
+      </LinkReceive>
+      <Toaster />
+    </div>
   );
 }
 `;
@@ -107,7 +104,7 @@ export function ClaimExample() {
               />
             </div>
             <LinkReceiveError />
-            <LinkReceiveButton className="w-full" />
+            <LinkReceiveButton className="w-full" text="Claim" />
           </div>
         </LinkReceive>
         <Toaster />
