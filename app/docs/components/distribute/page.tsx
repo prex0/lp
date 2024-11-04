@@ -11,7 +11,8 @@ export default function Page() {
             Distribute
           </h1>
           <p className="text-gray-400 text-lg">
-            Distribute component is a component for making the link for token airdrop.
+            Distribute component is a component for making the link for token
+            airdrop.
           </p>
         </div>
         <DistributeSubmitExample />
@@ -23,7 +24,8 @@ export default function Page() {
             Claim
           </h1>
           <p className="text-gray-400 text-lg">
-            This is an example of actually receiving tokens from a distribution link.
+            This is an example of actually receiving tokens from a distribution
+            link.
           </p>
         </div>
         <ClaimDistributeExample />

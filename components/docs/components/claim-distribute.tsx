@@ -6,8 +6,8 @@ import {
   DistributionReceiveButton,
   DistributionReceiveName,
   DistributionReceiveCheckLocation,
-  DistributionReceiveMessage
-} from '@prex0/uikit/distribute'
+  DistributionReceiveMessage,
+} from "@prex0/uikit/distribute";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { useCallback } from "react";
@@ -84,8 +84,8 @@ export function ClaimDistributeExample() {
       <div className="w-[316px]">
         <DistributionReceive
           claimParams={{
-            id: 'test-id',
-            secret: 'test-secret',
+            id: "test-id",
+            secret: "test-secret",
           }}
           onSuccess={onSuccess}
         >
@@ -94,11 +94,11 @@ export function ClaimDistributeExample() {
               <DistributionReceiveName />
             </div>
             <div>
-              <DistributionReceiveAmount showSymbol/>
+              <DistributionReceiveAmount showSymbol />
             </div>
           </div>
           <DistributionReceiveCheckLocation>
-            <div className='flex flex-col gap-4'>
+            <div className="flex flex-col gap-4">
               <div>
                 <DistributionReceiveMessage />
               </div>

@@ -64,7 +64,9 @@ export function LinkTransferExample() {
           toAddress="0xa234567890123000000000000000000000000002"
           amount=""
           mode="link"
-          getURL={() => `${window.location.origin}/docs/components/link-transfer`}
+          getURL={() =>
+            `${window.location.origin}/docs/components/link-transfer`
+          }
         >
           <div className="flex flex-col gap-4">
             <div className="space-y-2">
