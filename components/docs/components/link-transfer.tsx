@@ -29,6 +29,7 @@ export function LinkTransferExample() {
         toAddress="0xa234567890123000000000000000000000000002"
         amount=""
         mode="link"
+        getURL={() => \`\${window.location.origin}/claim\`}
       >
         <div className="flex flex-col gap-4">
           <div className="space-y-2">
@@ -63,6 +64,7 @@ export function LinkTransferExample() {
           toAddress="0xa234567890123000000000000000000000000002"
           amount=""
           mode="link"
+          getURL={() => `${window.location.origin}/docs/components/claim`}
         >
           <div className="flex flex-col gap-4">
             <div className="space-y-2">

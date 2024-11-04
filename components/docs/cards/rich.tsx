@@ -40,6 +40,7 @@ export function RichTransferExample() {
   return (
     <div>
       <RichTransferCard
+        getURL={() => \`\${window.location.origin}/docs/components/claim?openExternalBrowser=1\`}
         token={USDC_TOKEN_ARBITRUM}
         amount=""
         onSuccess={onSuccess}
@@ -73,6 +74,7 @@ export function RichTransferCardExample() {
     <PreviewComponent code={TransferCode}>
       <div className="w-[320px]">
         <RichTransferCard
+          getURL={() => `${window.location.origin}/docs/components/claim`}
           token={USDC_TOKEN_ARBITRUM}
           amount=""
           onSuccess={onSuccess}

@@ -8,7 +8,10 @@ export default function Page() {
         <h1 className="text-4xl font-bold mb-4 text-white" id="installation">
           Link Transfer
         </h1>
-        <p className="text-gray-400 text-lg">Link transfer component.</p>
+        <p className="text-gray-400 text-lg">
+          Link transfer component is a component for sending tokens via message
+          apps.
+        </p>
       </div>
       <LinkTransferExample />
     </div>

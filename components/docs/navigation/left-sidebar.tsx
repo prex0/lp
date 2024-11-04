@@ -42,6 +42,7 @@ export function LeftSidebar() {
               title="Link Transfer"
               to="/docs/components/link-transfer"
             />
+            <SubMenuItem title="Claim" to="/docs/components/claim" />
             <SubMenuItem title="Swap" to="/docs/components/swap" />
           </SidebarMenu>
         </SidebarGroupContent>
