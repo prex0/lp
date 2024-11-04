@@ -44,38 +44,38 @@ export const DistributeSubmitExample = () => {
     <div className='max-w-md mx-auto p-4'>
       <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">名前</label>
+          <label className="block text-sm font-medium text-gray-700">Name</label>
           <DistributionSubmitNameInput className="w-full" />
         </div>
         <div className='flex flex-row gap-2 mb-4'>
-        <label className="block text-sm font-medium text-gray-700">有効期限 (7日)</label>
+        <label className="block text-sm font-medium text-gray-700">Expiration (7 days)</label>
             <DistributionSubmitExpirationInput options={[
-              { label: '1日', value: '1 days' },
-              { label: '7日', value: '7 days' },
+              { label: '1 day', value: '1 days' },
+              { label: '7 days', value: '7 days' },
             ]} />
 
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">配布量</label>
+          <label className="block text-sm font-medium text-gray-700">Amount</label>
           <DistributionSubmitAmountForm>
             <AmountFormSimpleInput/>
           </DistributionSubmitAmountForm>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">引き出しごとの配布量</label>
+          <label className="block text-sm font-medium text-gray-700">Amount per withdrawal</label>
           <DistributionSubmitAmountPerWithdrawalForm>
             <AmountFormInput/>
           </DistributionSubmitAmountPerWithdrawalForm>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">クールタイム</label>
+          <label className="block text-sm font-medium text-gray-700">Cool time</label>
           <DistributionSubmitCoolTimeInput options={[
-            { label: '1時間', value: '1 hours' },
-            { label: '1日', value: '1 days' },
+            { label: '1 hour', value: '1 hours' },
+            { label: '1 day', value: '1 days' },
           ]} />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">アドレスごとの最大配布量</label>
+          <label className="block text-sm font-medium text-gray-700">Max amount per address</label>
           <DistributionSubmitMaxAmountPerAddressForm>
           <AmountFormInput/>
           </DistributionSubmitMaxAmountPerAddressForm>
@@ -84,7 +84,7 @@ export const DistributeSubmitExample = () => {
           <DistributionSubmitLocationInput googleApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY || ''}/>
         </div>
         <DistributionSubmitError className="mb-4" />
-        <DistributionSubmitButton text="送信" />
+        <DistributionSubmitButton text="Submit" />
         <DistributionSubmitCode className="mt-4" showDownloadButton/>
       </DistributionSubmit>
     </div>
@@ -104,24 +104,24 @@ export const DistributeSubmitExample = () => {
         <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              名前
+              Name
             </label>
             <DistributionSubmitNameInput className="w-full" />
           </div>
           <div className="flex flex-row gap-2 mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              有効期限 (7日)
+              Expiration (7 days)
             </label>
             <DistributionSubmitExpirationInput
               options={[
-                { label: "1日", value: "1 days" },
-                { label: "7日", value: "7 days" },
+                { label: "1 day", value: "1 days" },
+                { label: "7 days", value: "7 days" },
               ]}
             />
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              配布量
+              Amount
             </label>
             <DistributionSubmitAmountForm>
               <AmountFormSimpleInput />
@@ -129,7 +129,7 @@ export const DistributeSubmitExample = () => {
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              引き出しごとの配布量
+              Amount per withdrawal
             </label>
             <DistributionSubmitAmountPerWithdrawalForm>
               <AmountFormInput />
@@ -137,18 +137,18 @@ export const DistributeSubmitExample = () => {
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              クールタイム
+              Cool time
             </label>
             <DistributionSubmitCoolTimeInput
               options={[
-                { label: "1時間", value: "1 hours" },
-                { label: "1日", value: "1 days" },
+                { label: "1 hour", value: "1 hours" },
+                { label: "1 day", value: "1 days" },
               ]}
             />
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
-              アドレスごとの最大配布量
+              Max amount per address
             </label>
             <DistributionSubmitMaxAmountPerAddressForm>
               <AmountFormInput />
@@ -160,7 +160,7 @@ export const DistributeSubmitExample = () => {
             />
           </div>
           <DistributionSubmitError className="mb-4" />
-          <DistributionSubmitButton text="送信" />
+          <DistributionSubmitButton text="Submit" />
           <DistributionSubmitCode className="mt-4" showDownloadButton />
         </DistributionSubmit>
       </div>
