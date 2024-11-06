@@ -27,6 +27,10 @@ export function LeftSidebar() {
           <SidebarMenu>
             <SubMenuItem title="Next.js" to="/docs/start/nextjs" />
             <SubMenuItem title="Manual Installation" to="/docs/start/manual" />
+            <SubMenuItem
+              title="Use your token"
+              to="/docs/start/use-your-token"
+            />
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>

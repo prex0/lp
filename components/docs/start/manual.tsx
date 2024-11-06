@@ -90,7 +90,7 @@ npx shadcn@latest add button select input label dialog tooltip`}
           Add the following to your ./app/providers.tsx file:
         </p>
         <div>
-          <CodeBlock language="jsx" code={code} showLineNumbers={false} />
+          <CodeBlock language="tsx" code={code} showLineNumbers={false} />
         </div>
       </div>
 
@@ -120,7 +120,7 @@ npx shadcn@latest add button select input label dialog tooltip`}
           Update the following in your ./app/layout.tsx file:
         </p>
         <div>
-          <CodeBlock language="jsx" code={layoutCode} showLineNumbers={false} />
+          <CodeBlock language="tsx" code={layoutCode} showLineNumbers={false} />
         </div>
       </div>
     </div>

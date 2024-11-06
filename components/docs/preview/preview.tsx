@@ -23,7 +23,7 @@ export function PreviewComponent({
         </Card>
       </TabsContent>
       <TabsContent value="code" className="w-full">
-        <CodeBlock code={code} />
+        <CodeBlock language="tsx" code={code} />
       </TabsContent>
     </Tabs>
   );

@@ -15,7 +15,6 @@ import {
   DistributionSubmitLocationInput,
   DistributionSubmitAmountForm,
   DistributionSubmitAmountPerWithdrawalForm,
-  DistributionSubmitMaxAmountPerAddressForm,
 } from "@prex0/uikit/distribute";
 import { PreviewComponent } from "../preview/preview";
 
