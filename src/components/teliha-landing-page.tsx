@@ -886,7 +886,7 @@ export function TelihaLandingPageComponent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div>
               <a 
-                href="https://www.predy.finance/" 
+                href="https://app.predy.finance/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="block hover:opacity-90 transition-opacity"
