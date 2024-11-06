@@ -12,7 +12,6 @@ import {
   DistributionSubmitCode,
   DistributionSubmitError,
   DistributionSubmitExpirationInput,
-  DistributionSubmitCoolTimeInput,
   DistributionSubmitLocationInput,
   DistributionSubmitAmountForm,
   DistributionSubmitAmountPerWithdrawalForm,
@@ -68,19 +67,6 @@ export const DistributeSubmitExample = () => {
           </DistributionSubmitAmountPerWithdrawalForm>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Cool time</label>
-          <DistributionSubmitCoolTimeInput options={[
-            { label: '1 hour', value: '1 hours' },
-            { label: '1 day', value: '1 days' },
-          ]} />
-        </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Max amount per address</label>
-          <DistributionSubmitMaxAmountPerAddressForm>
-          <AmountFormInput/>
-          </DistributionSubmitMaxAmountPerAddressForm>
-        </div>
-        <div className="mb-4">
           <DistributionSubmitLocationInput googleApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY || ''}/>
         </div>
         <DistributionSubmitError className="mb-4" />
@@ -134,25 +120,6 @@ export const DistributeSubmitExample = () => {
             <DistributionSubmitAmountPerWithdrawalForm>
               <AmountFormInput />
             </DistributionSubmitAmountPerWithdrawalForm>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">
-              Cool time
-            </label>
-            <DistributionSubmitCoolTimeInput
-              options={[
-                { label: "1 hour", value: "1 hours" },
-                { label: "1 day", value: "1 days" },
-              ]}
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">
-              Max amount per address
-            </label>
-            <DistributionSubmitMaxAmountPerAddressForm>
-              <AmountFormInput />
-            </DistributionSubmitMaxAmountPerAddressForm>
           </div>
           <div className="mb-4">
             <DistributionSubmitLocationInput

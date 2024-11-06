@@ -12,7 +12,8 @@ export default function Page() {
           </h1>
           <p className="text-gray-400 text-lg">
             Distribute component is a component for making the link for token
-            airdrop.
+            airdrop. You can set the total amount to deposit, expiration, and
+            the amount per withdrawal.
           </p>
         </div>
         <DistributeSubmitExample />
