@@ -4,7 +4,7 @@ import "./global.css";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Prex - Revolutionize DApp Development -",
+  title: "Prex: Like Stripe for Crypto",
   description:
     "Prex is a platform for building decentralized applications (DApps) on the Ethereum blockchain. It provides a suite of tools and services to streamline the development process and make it more efficient.",
   icons: {
