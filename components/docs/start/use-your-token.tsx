@@ -53,6 +53,16 @@ export function GettingStartedUseYourTokenPage() {
         </p>
         <CodeBlock language="tsx" code={code} showLineNumbers={false} />
       </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white" id="create-project">
+          Supported tokens
+        </h2>
+        <p className="text-gray-300">
+          Prex supports ERC20 tokens with <a className="underline" href="https://github.com/ethereum/ercs/blob/master/ERCS/erc-2612.md">ERC2612 permit</a> functionality. This allows for gasless transactions and seamless integration with the Prex UI Kit. Ensure your token contract implements the permit function to take full advantage of these features.
+        </p>
+      </div>
+
     </div>
   );
 }
