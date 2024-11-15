@@ -1,25 +1,23 @@
 "use client";
-import { PreviewComponent } from "../preview/preview";
+import { PreviewComponent } from "../../preview/preview";
 import { TokenBalance } from "@prex0/uikit/identity";
 import { USDC_TOKEN_ARBITRUM } from "@prex0/uikit";
+import { ComponentDetail } from "../common/ComponentDetail";
 
 const code = `<TokenBalance token={USDC_TOKEN_ARBITRUM} />`;
 
 export function TokenBalanceExample() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold mb-4 text-white" id="installation">
-          Token Balance
-        </h1>
-        <p className="text-gray-400 text-lg">Token balance component.</p>
-      </div>
-
+    <ComponentDetail
+      id="token-balance"
+      title="Token Balance"
+      description="Token balance component."
+    >
       <PreviewComponent code={code}>
         <div>
           <TokenBalance token={USDC_TOKEN_ARBITRUM} />
         </div>
       </PreviewComponent>
-    </div>
+    </ComponentDetail>
   );
 }

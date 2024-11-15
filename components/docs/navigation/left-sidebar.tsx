@@ -32,6 +32,7 @@ export function LeftSidebar() {
               title="Use your token"
               to="/docs/start/use-your-token"
             />
+            <SubMenuItem title="Localization" to="/docs/start/localization" />
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
