@@ -79,7 +79,10 @@ export const DistributeSubmitExample = () => {
 
 `;
 
-const description = `Distribute component is a component for making the link for token airdrop. You can set the total amount to deposit, expiration, and the amount per withdrawal.`;
+const description = `DistributionSubmit component is a component for making the link for token airdrop.
+You can set the total amount to deposit, the amount per withdrawal, and the expiration of the link.
+You can also specify the range of location information to enable the receive button at the time of receipt.
+`;
 
 function getURL() {
   return `${window.location.origin}/distribute/receive`;

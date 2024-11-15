@@ -22,6 +22,9 @@ export function TransfersExample() {
       <TransferHistoryItems>
         <TransferHistoryItemCustom />
       </TransferHistoryItems>
+      <TransferHistoryLoadMore>
+        <Button>Load more</Button>
+      </TransferHistoryLoadMore>
     </TransferHistory>
   );
 }

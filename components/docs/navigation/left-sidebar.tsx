@@ -7,6 +7,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "../../ui/sidebar";
+import { usePathname } from "next/navigation";
 
 export function LeftSidebar() {
   return (
@@ -72,9 +73,13 @@ export function LeftSidebar() {
 }
 
 function SubMenuItem({ title, to }: { title: string; to: string }) {
+  const pathname = usePathname();
+
+  const isActive = pathname === to;
+
   return (
     <SidebarMenuItem>
-      <SidebarMenuButton asChild>
+      <SidebarMenuButton asChild isActive={isActive}>
         <Link
           key={to}
           href={to}
