@@ -25,7 +25,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       apiKey={process.env.NEXT_PUBLIC_API_KEY || 'test'}
       tokens={[YOUR_TOKEN_ARBITRUM]}
       dryRun={process.env.NEXT_PUBLIC_DRY_RUN === 'true'}
-  >
+    >
       {children}
     </PrexUIKitProvider>
   );
@@ -59,10 +59,19 @@ export function GettingStartedUseYourTokenPage() {
           Supported tokens
         </h2>
         <p className="text-gray-300">
-          Prex supports ERC20 tokens with <a className="underline" href="https://github.com/ethereum/ercs/blob/master/ERCS/erc-2612.md">ERC2612 permit</a> functionality. This allows for gasless transactions and seamless integration with the Prex UI Kit. Ensure your token contract implements the permit function to take full advantage of these features.
+          Prex supports ERC20 tokens with{" "}
+          <a
+            className="underline"
+            href="https://github.com/ethereum/ercs/blob/master/ERCS/erc-2612.md"
+          >
+            ERC2612 permit
+          </a>{" "}
+          functionality. This allows for gasless transactions and seamless
+          integration with the Prex UI Kit. Ensure your token contract
+          implements the permit function to take full advantage of these
+          features.
         </p>
       </div>
-
     </div>
   );
 }
