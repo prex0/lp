@@ -1,5 +1,10 @@
 import CodeBlock from "../preview/code-block";
 
+const installShadcnCode = `npx shadcn@latest init
+npx shadcn@latest add button select input label dialog tooltip`;
+
+const installPrexCode = `npm install @prex0/uikit`;
+
 const code = `'use client';
 import { PrexUIKitProvider, USDC_TOKEN_ARBITRUM, WETH_TOKEN_ARBITRUM } from "@prex0/uikit";
 
@@ -62,12 +67,11 @@ export function GettingStartedManualPage() {
         <p className="text-gray-300">
           Set up shadcn and add the components you need:
         </p>
-        <pre className="bg-gray-900 p-4 rounded-lg">
-          <code className="text-gray-300">
-            {`npx shadcn@latest init
-npx shadcn@latest add button select input label dialog tooltip`}
-          </code>
-        </pre>
+        <CodeBlock
+          language="bash"
+          code={installShadcnCode}
+          showLineNumbers={false}
+        />
       </div>
 
       <div className="space-y-4">
@@ -77,9 +81,11 @@ npx shadcn@latest add button select input label dialog tooltip`}
         <p className="text-gray-300">
           Run the following command to create a tailwind.config.js file:
         </p>
-        <pre className="bg-gray-900 p-4 rounded-lg">
-          <code className="text-gray-300">npm install @prex0/uikit</code>
-        </pre>
+        <CodeBlock
+          language="bash"
+          code={installPrexCode}
+          showLineNumbers={false}
+        />
       </div>
 
       <div className="space-y-4">

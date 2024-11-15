@@ -38,7 +38,8 @@ export function LeftSidebar() {
         <SidebarGroupLabel>Components</SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenu>
-            <SubMenuItem title="Address" to="/docs/components/address" />
+            <SubMenuItem title="Wallet" to="/docs/components/wallet" />
+            <SubMenuItem title="Identity" to="/docs/components/identity" />
             <SubMenuItem title="Token Balance" to="/docs/components/balance" />
             <SubMenuItem title="Pay" to="/docs/components/pay" />
             <SubMenuItem title="Transfer" to="/docs/components/transfer" />
@@ -48,6 +49,11 @@ export function LeftSidebar() {
             />
             <SubMenuItem title="Swap" to="/docs/components/swap" />
             <SubMenuItem title="Distribute" to="/docs/components/distribute" />
+            <SubMenuItem title="History" to="/docs/components/history" />
+            <SubMenuItem
+              title="Shared Wallet"
+              to="/docs/components/shared-wallet"
+            />
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>

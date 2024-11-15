@@ -15,7 +15,7 @@ export default function CodeBlock({
   language = "jsx",
 }: {
   code: string;
-  language?: string;
+  language?: "jsx" | "tsx" | "bash";
   showLineNumbers?: boolean;
 }) {
   return (

@@ -1,10 +1,11 @@
 "use client";
-import { PreviewComponent } from "../preview/preview";
+import { PreviewComponent } from "../../preview/preview";
 import { Address, MyCode } from "@prex0/uikit/identity";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
+import { ComponentDetail } from "../common/ComponentDetail";
 
-const WalletCode = `import { Address } from "@prex0/uikit/identity";
+const IdentityCode = `import { Address } from "@prex0/uikit/identity";
 import { EmbeddedWallet } from "@prex0/uikit/wallet";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
@@ -26,19 +27,16 @@ export function AddressExample() {
   )
 }`;
 
-export function AddressExample() {
+export function IdentityCodeExample() {
   const { toast } = useToast();
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold mb-4 text-white" id="installation">
-          Address
-        </h1>
-        <p className="text-gray-400 text-lg">Embedded wallet component.</p>
-      </div>
-
-      <PreviewComponent code={WalletCode}>
+    <ComponentDetail
+      id="code"
+      title="Code"
+      description="The Code component displays the user's code."
+    >
+      <PreviewComponent code={IdentityCode}>
         <div>
           <div className="space-y-3">
             <MyCode />
@@ -51,6 +49,6 @@ export function AddressExample() {
           <Toaster />
         </div>
       </PreviewComponent>
-    </div>
+    </ComponentDetail>
   );
 }
