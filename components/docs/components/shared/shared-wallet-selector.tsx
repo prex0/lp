@@ -1,10 +1,11 @@
 "use client";
 import { PreviewComponent } from "../../preview/preview";
 import { SharedWalletSelector } from "@prex0/uikit/wallet";
-import { Address, Nickname } from "@prex0/uikit/identity";
+import { Address } from "@prex0/uikit/identity";
 import { ComponentDetail } from "../common/ComponentDetail";
 
 const Code = `import { SharedWalletSelector } from "@prex0/uikit/wallet";
+import { Address } from "@prex0/uikit/identity";
 
 export function SharedWalletSelectorExample() {
   return (

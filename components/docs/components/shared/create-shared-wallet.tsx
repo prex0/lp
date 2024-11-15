@@ -3,11 +3,11 @@ import { CreateSharedWallet } from "@prex0/uikit/wallet";
 import { PreviewComponent } from "../../preview/preview";
 import { ComponentDetail } from "../common/ComponentDetail";
 
-const Code = `import { SharedWalletSelector } from "@prex0/uikit/wallet";
+const Code = `import { CreateSharedWallet } from "@prex0/uikit/wallet";
 
 export function CreateSharedWalletExample() {
   return (
-    <Address />
+    <CreateSharedWallet buttonText="Create Shared Wallet" />
   )
 }`;
 
