@@ -31,61 +31,75 @@ export function CustomTransferHistoryExample() {
 
 const getFormattedDate = (date: number) => {
   return new Date(date * 1000).toLocaleDateString();
-}
+};
 
 const CustomHistoryItemContent = ({
   className,
   item,
   me,
   token,
-  explorerURL
+  explorerURL,
 }: TransferHistoryItemCustomComponentReact) => {
-  if(token === undefined) {
+  if (token === undefined) {
     return null;
   }
 
-  if(item === undefined) {
+  if (item === undefined) {
     return null;
   }
 
-  if(me === undefined) {
+  if (me === undefined) {
     return null;
   }
- 
+
   if (isAddressEqual(item.sender, me)) {
     return (
-      <div className={className}>
-        <div className="flex justify-between text-foreground">
-          <div>Sent to {item.recipientName}.</div>
-          <div>{formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}</div>
+      <div
+        className={\`\${className} bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 rounded-lg shadow-lg\`}
+      >
+        <div className="flex justify-between text-white font-bold">
+          <div>Enviado a {item.recipientName}.</div>
+          <div>
+            {formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}
+          </div>
         </div>
         <div className="flex justify-start">
           <div>
-            <a className="text-xs" href={explorerURL}>
+            <a
+              className="text-xs text-yellow-300 hover:underline"
+              href={explorerURL}
+            >
               {getFormattedDate(item.createdAt)}
             </a>
           </div>
         </div>
       </div>
-    )
+    );
   } else if (isAddressEqual(item.recipient, me)) {
     return (
-      <div className={className}>
-        <div className="flex justify-between text-foreground">
-          <div>Received from {item.senderName}.</div>
-          <div>{formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}</div>
+      <div
+        className={\`\${className} bg-gradient-to-r from-green-400 via-blue-500 to-indigo-500 p-4 rounded-lg shadow-lg\`}
+      >
+        <div className="flex justify-between text-white font-bold">
+          <div>Recibido de {item.senderName}.</div>
+          <div>
+            {formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}
+          </div>
         </div>
         <div className="flex justify-start">
           <div>
-            <a className="text-xs" href={explorerURL}>
+            <a
+              className="text-xs text-yellow-300 hover:underline"
+              href={explorerURL}
+            >
               {getFormattedDate(item.createdAt)}
             </a>
           </div>
         </div>
       </div>
-    )
+    );
   }
-}
+};
 `;
 
 const description = `This is an example of displaying a list of user transfers.
