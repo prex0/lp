@@ -12,7 +12,7 @@ export default function Page() {
     >
       <ComponentDetail
         id="shared-wallet-overview"
-        title="What Shared Wallets are?"
+        title="What are Shared Wallets?"
         description="Shared wallets are useful for managing multiple wallets.
         Each shared wallet can have any passkey wallet added as an owner, and owners can access the assets of the shared wallet with their passkey."
       >

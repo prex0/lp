@@ -16,7 +16,7 @@ export function CreateSharedWalletExample() {
     <ComponentDetail
       id="create-shared-wallet"
       title="Create Shared Wallet"
-      description="This is a form to create a Shared Wallet by setting a name and owner list"
+      description="This is a form to create a Shared Wallet by setting a name and owner list. Currently, the address of the Shared Wallet is determined deterministically based on the owner list. This means that only one type of Shared Wallet can be created for the same owner list."
     >
       <PreviewComponent code={Code}>
         <div className="w-full">
