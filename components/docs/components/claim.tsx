@@ -82,7 +82,6 @@ export function ClaimExample() {
       <div className="w-[316px]">
         <LinkReceive
           linkParams={{
-            id: "123",
             secret: "456",
           }}
           onSuccess={onSuccess}
