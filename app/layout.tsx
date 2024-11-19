@@ -1,4 +1,5 @@
 import { Header } from "../components/common/header";
+import { Footer } from "../components/common/footer"; // Import the Footer component
 import "@prex0/uikit/styles.css";
 import "./global.css";
 import { Metadata, Viewport } from "next";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <div className="min-h-screen bg-black text-white flex flex-col">
             <Header />
             {children}
+            <Footer /> {/* Add the Footer component */}
           </div>
         </div>
       </body>
