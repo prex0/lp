@@ -3,6 +3,7 @@ import { Footer } from "../components/common/footer"; // Import the Footer compo
 import "@prex0/uikit/styles.css";
 import "./global.css";
 import { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Prex: Like Stripe for Crypto",
@@ -35,6 +36,7 @@ export default function RootLayout({
             <Footer /> {/* Add the Footer component */}
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
