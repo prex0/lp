@@ -5,17 +5,19 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
+import typescript from "react-syntax-highlighter/dist/esm/languages/prism/typescript";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("typescript", typescript);
 
 export default function CodeBlock({
   code,
   language = "jsx",
 }: {
   code: string;
-  language?: "jsx" | "tsx" | "bash";
+  language?: "jsx" | "tsx" | "bash" | "typescript";
   showLineNumbers?: boolean;
 }) {
   return (
