@@ -48,8 +48,11 @@ const langCode = `export const en = {
   INSUFFICIENT_CREDIT: 'Insufficient credit',
   INSUFFICIENT_FUNDS_IN_DISTRIBUTION_REQUEST:
     'Insufficient funds in distribution request',
+  NO_ENOUGH_COOL_TIME: 'No enough cool time',
+  EXCEED_MAX_DISTRIBUTE_AMOUNT: 'Exceed max distribute amount',
   POLICY_VIOLATION: 'ERC20 is not allowed',
   PERMISSION_DENIED: 'API key or origin is not allowed',
+  API_RATE_LIMIT_EXCEEDED: 'API rate limit exceeded',
   // Link Transfer
   TOKEN_NOT_SET: 'Token not set',
   INVALID_AMOUNT: 'Invalid amount',
@@ -62,8 +65,10 @@ const langCode = `export const en = {
   DISTRIBUTE_EXCEED_MAX_AMOUNT: 'Already claimed',
   DISTRIBUTE_INVALID_LOCATION: 'Not in the circle',
   DISTRIBUTE_NO_TOKENS: 'No tokens in distribution request',
-  NO_ENOUGH_COOL_TIME: 'No enough cool time',
-  EXCEED_MAX_DISTRIBUTE_AMOUNT: 'Exceed max distribute amount',
+  DISTRIBUTE_RECIPIENT_NOT_ALLOWED:
+    'Distribution to non-SmartWallet recipients is not allowed',
+  DISTRIBUTE_INVALID_REQUEST:
+    'Invalid request(invalid amount, amountPerWithdrawal or expiry)',
   // Status
   STATUS_NOT_FOUND: 'Not found',
   STATUS_PENDING: 'Pending',
