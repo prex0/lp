@@ -69,6 +69,11 @@ const langCode = `export const en = {
     'Distribution to non-SmartWallet recipients is not allowed',
   DISTRIBUTE_INVALID_REQUEST:
     'Invalid request(invalid amount, amountPerWithdrawal or expiry)',
+  // Geolocation
+  GEOLOCATION_PERMISSION_DENIED: 'User denied the request for Geolocation.',
+  GEOLOCATION_POSITION_UNAVAILABLE: 'Location information is unavailable.',
+  GEOLOCATION_TIMEOUT: 'The request to get user location timed out.',
+  GEOLOCATION_UNKNOWN_ERROR: 'An unknown error occurred.',
   // Status
   STATUS_NOT_FOUND: 'Not found',
   STATUS_PENDING: 'Pending',
