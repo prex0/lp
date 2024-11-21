@@ -1,13 +1,14 @@
 import CodeBlock from "../../preview/code-block";
 
-const registerSecretCode = `
-import { NextResponse } from 'next/server';
+const registerSecretCode = `import { NextResponse } from 'next/server';
 import { validateDistributionAndSecret } from '@prex0/prex-client';
 import type { RegisterServerGeneratedSecretInput } from '@prex0/prex-client';
 import { setSecret } from '@/lib/storage';
 
 export async function POST(request: Request) {
   const requestBody: RegisterServerGeneratedSecretInput = await request.json();
+
+  console.log(requestBody);
 
   try {
     const isValid = await validateDistributionAndSecret(requestBody);
@@ -17,14 +18,14 @@ export async function POST(request: Request) {
     }
 
     await setSecret(requestBody.distributionId, requestBody.secret);
-
+    await setSecret(requestBody.distributionId + '_sc', requestBody.shortCode);
+    
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     console.error('Error registering secret:', error);
     return NextResponse.json({ success: false }, { status: 500 });
   }
-}
-`;
+}`;
 
 const generateSecretCode = `import { NextResponse } from 'next/server';
 import { createServerGeneratedSecret } from '@prex0/prex-client';
@@ -34,13 +35,21 @@ import { getSecret } from '@/lib/storage';
 export async function POST(request: Request) {
   const requestBody: ServerGeneratedSecretInput = await request.json();
   const secret = await getSecret(requestBody.distributionId);
+  const shortCode = await getSecret(requestBody.distributionId + '_sc');
 
   if (!secret) {
     return NextResponse.json({ message: 'Secret not found' }, { status: 404 });
   }
 
+  if (!shortCode) {
+    return NextResponse.json({ message: 'Short code not found' }, { status: 404 });
+  }
+
+  if (requestBody.shortCode !== shortCode.toString()) {
+    return NextResponse.json({ message: 'Short code mismatch' }, { status: 400 });
+  }
+
   try {
-    // generates one-time secret
     const generatedSecret = await createServerGeneratedSecret(
       secret.toString(),
       requestBody
