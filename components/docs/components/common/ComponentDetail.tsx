@@ -4,7 +4,7 @@ export function ComponentDetail({
   title,
   description,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   id: string;
   title: string;
   description: string;

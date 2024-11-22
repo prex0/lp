@@ -1,5 +1,5 @@
-import { Header } from "../components/common/header";
-import { Footer } from "../components/common/footer"; // Import the Footer component
+import { Header } from "@/components/common/header";
+import { Footer } from "@/components/common/footer"; // Import the Footer component
 import "@prex0/uikit/styles.css";
 import "./global.css";
 import { Metadata, Viewport } from "next";

@@ -1,7 +1,7 @@
 "use client";
 import { CreateSharedWallet } from "@prex0/uikit/wallet";
-import { PreviewComponent } from "../../preview/preview";
-import { ComponentDetail } from "../common/ComponentDetail";
+import { PreviewComponent } from "@/components/docs/preview/preview";
+import { ComponentDetail } from "@/components/docs/components/common/ComponentDetail";
 
 const Code = `import { CreateSharedWallet } from "@prex0/uikit/wallet";
 
