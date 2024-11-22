@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -10,7 +11,20 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Teliha, Inc.
             </a>
           </div>
-          <div className="flex space-x-4"></div>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+            <Link href="/terms" className="hover:text-white">
+              Terms of Service
+            </Link>
+            <Link href="/privacy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/support" className="hover:text-white">
+              Support
+            </Link>
+            <Link href="/commercial-transactions" className="hover:text-white">
+              特定商取引法に基づく表記
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
