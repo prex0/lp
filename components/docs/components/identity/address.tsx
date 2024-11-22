@@ -17,6 +17,7 @@ export function AddressExample() {
       <div className="space-y-3">
         <div className="flex justify-center items-center">
           <Address
+            isSliced={false}
             onCopied={() => toast({ title: "Copied to clipboard" })}
           />
         </div>
@@ -40,6 +41,7 @@ export function IdentityAddressExample() {
           <div className="space-y-3">
             <div className="flex justify-center items-center">
               <Address
+                isSliced={false}
                 onCopied={() => toast({ title: "Copied to clipboard" })}
               />
             </div>
