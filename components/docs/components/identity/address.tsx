@@ -1,6 +1,6 @@
 "use client";
 import { PreviewComponent } from "../../preview/preview";
-import { Address } from "@prex0/uikit/identity";
+import { Address, useCurrentWalletAddress } from "@prex0/uikit/identity";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { ComponentDetail } from "../common/ComponentDetail";
@@ -17,7 +17,7 @@ export function AddressExample() {
       <div className="space-y-3">
         <div className="flex justify-center items-center">
           <Address
-            isSliced={false}
+            isSliced={true}
             onCopied={() => toast({ title: "Copied to clipboard" })}
           />
         </div>
@@ -41,7 +41,7 @@ export function IdentityAddressExample() {
           <div className="space-y-3">
             <div className="flex justify-center items-center">
               <Address
-                isSliced={false}
+                isSliced={true}
                 onCopied={() => toast({ title: "Copied to clipboard" })}
               />
             </div>
