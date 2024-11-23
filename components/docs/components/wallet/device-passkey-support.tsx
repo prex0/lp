@@ -2,6 +2,7 @@
 import { PreviewComponent } from "../../preview/preview";
 import { DevicePasskeySupport, openChrome } from "@prex0/uikit/wallet";
 import { ComponentDetail } from "../common/ComponentDetail";
+import { Button } from "@/components/ui/button";
 
 const Code = `import { DevicePasskeySupport, openChrome } from "@prex0/uikit/wallet";
 
@@ -9,8 +10,9 @@ export function DevicePasskeySupportExample() {
   return (
   <DevicePasskeySupport
     notSupportedComponent={
-      <div>
-        Not supported <button onClick={openChrome}>Open Chrome</button>
+      <div className="flex flex-col items-center gap-4">
+        <p>Not supported</p>
+        <Button onClick={openChrome}>Open Chrome</Button>
       </div>
     }
   >
@@ -29,8 +31,9 @@ export default function DevicePasskeySupportExample() {
       <PreviewComponent code={Code}>
         <DevicePasskeySupport
           notSupportedComponent={
-            <div>
-              Not supported <button onClick={openChrome}>Open Chrome</button>
+            <div className="flex flex-col items-center gap-4">
+              <p>Not supported</p>
+              <Button onClick={openChrome}>Open Chrome</Button>
             </div>
           }
         >
