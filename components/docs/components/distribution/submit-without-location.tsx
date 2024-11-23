@@ -12,12 +12,13 @@ import {
   DistributionSubmitCode,
   DistributionSubmitError,
   DistributionSubmitExpirationInput,
-  DistributionSubmitLocationInput,
   DistributionSubmitAmountForm,
   DistributionSubmitAmountPerWithdrawalForm,
+  DistributionSubmitShare,
 } from "@prex0/uikit/distribute";
 import { PreviewComponent } from "../../preview/preview";
 import { ComponentDetail } from "../common/ComponentDetail";
+import { Button } from "@/components/ui/button";
 
 const DistributeSubmitCode = `import { AmountFormInput, AmountFormSimpleInput, USDC_TOKEN_ARBITRUM } from '@prex0/uikit'
 import {
@@ -27,11 +28,11 @@ import {
   DistributionSubmitCode,
   DistributionSubmitError,
   DistributionSubmitExpirationInput,
-  DistributionSubmitLocationInput,
   DistributionSubmitAmountForm,
   DistributionSubmitAmountPerWithdrawalForm,
-  DistributionSubmitMaxAmountPerAddressForm
+  DistributionSubmitShare,
 } from '@prex0/uikit/distribute'
+import { Button } from "@/components/ui/button";
 
 function getURL() {
   return \`\${window.location.origin}/docs/components/distribute\`
@@ -48,7 +49,7 @@ export const DistributeSubmitExample = () => {
         <div className='flex flex-row gap-2 mb-4'>
         <label className="block text-sm font-medium text-gray-700">Expiration (7 days)</label>
             <DistributionSubmitExpirationInput options={[
-              { label: '1 day', value: '1 days' },
+              { label: '1 hours', value: '1 hours' },
               { label: '7 days', value: '7 days' },
             ]} />
 
@@ -65,11 +66,11 @@ export const DistributeSubmitExample = () => {
             <AmountFormInput/>
           </DistributionSubmitAmountPerWithdrawalForm>
         </div>
-        <div className="mb-4">
-          <DistributionSubmitLocationInput googleApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY || ''}/>
-        </div>
         <DistributionSubmitError className="mb-4" />
         <DistributionSubmitButton text="Submit" />
+        <DistributionSubmitShare>
+          <Button>Share</Button>
+        </DistributionSubmitShare>
         <DistributionSubmitCode className="mt-4" showDownloadButton/>
       </DistributionSubmit>
     </div>
@@ -130,14 +131,12 @@ export const DistributeSubmitExample = () => {
                 <AmountFormInput />
               </DistributionSubmitAmountPerWithdrawalForm>
             </div>
-            <div className="mb-4">
-              <DistributionSubmitLocationInput
-                googleApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY || ""}
-              />
-            </div>
             <DistributionSubmitError className="mb-4" />
             <DistributionSubmitButton text="Submit" />
-            <DistributionSubmitCode className="mt-4" showDownloadButton />
+            <DistributionSubmitShare>
+              <Button>Share</Button>
+            </DistributionSubmitShare>
+            <DistributionSubmitCode className="mt-4" />
           </DistributionSubmit>
         </div>
       </PreviewComponent>

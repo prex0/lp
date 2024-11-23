@@ -6,7 +6,6 @@ import {
   DistributionReceiveButton,
   DistributionReceiveName,
   DistributionReceiveExpiration,
-  DistributionReceiveCheckLocation,
   DistributionReceiveMessage,
 } from "@prex0/uikit/distribute";
 import { useToast } from "@/hooks/use-toast";
@@ -15,13 +14,12 @@ import { useCallback } from "react";
 import { PreviewComponent } from "../../preview/preview";
 import { ComponentDetail } from "../common/ComponentDetail";
 
-const ClaimDistributeCode = `import {
+const Code = `import {
   DistributionReceive,
   DistributionReceiveAmount,
   DistributionReceiveButton,
   DistributionReceiveName,
   DistributionReceiveExpiration,
-  DistributionReceiveCheckLocation,
   DistributionReceiveMessage
 } from '@prex0/uikit/distribute'
 import { useToast } from "@/hooks/use-toast";
@@ -59,16 +57,14 @@ export function ClaimDistributeExample() {
             <DistributionReceiveExpiration />
           </div>
         </div>
-        <DistributionReceiveCheckLocation>
-          <div className='flex flex-col gap-4'>
-            <div>
-              <DistributionReceiveMessage />
-            </div>
-            <div>
-              <DistributionReceiveButton />
-            </div>
+        <div className='flex flex-col gap-4'>
+          <div>
+            <DistributionReceiveMessage />
           </div>
-        </DistributionReceiveCheckLocation>
+          <div>
+            <DistributionReceiveButton />
+          </div>
+        </div>
       </DistributionReceive>
       <Toaster />
     </div>
@@ -94,7 +90,7 @@ export function ClaimDistributeExample() {
       title="Claim Distribute"
       description={description}
     >
-      <PreviewComponent code={ClaimDistributeCode}>
+      <PreviewComponent code={Code}>
         <div className="w-[316px]">
           <DistributionReceive
             claimParams={{
@@ -115,16 +111,14 @@ export function ClaimDistributeExample() {
                 <DistributionReceiveExpiration />
               </div>
             </div>
-            <DistributionReceiveCheckLocation>
-              <div className="flex flex-col gap-4">
-                <div>
-                  <DistributionReceiveMessage />
-                </div>
-                <div>
-                  <DistributionReceiveButton />
-                </div>
+            <div className="flex flex-col gap-4">
+              <div>
+                <DistributionReceiveMessage />
               </div>
-            </DistributionReceiveCheckLocation>
+              <div>
+                <DistributionReceiveButton />
+              </div>
+            </div>
           </DistributionReceive>
           <Toaster />
         </div>
