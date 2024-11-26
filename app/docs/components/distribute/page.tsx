@@ -6,8 +6,7 @@ import { ComponentGroup } from "../../../../components/docs/components/common/Co
 import { ComponentDistributeGenerateSecret } from "@/components/docs/components/distribution/generate-secret";
 import { ComponentDistributeWithoutLocation } from "@/components/docs/components/distribution/distribution-without-location";
 
-const description = `Distribute component is a component for making the link for token airdrop.
-You can set the total amount to deposit, expiration, and the amount per withdrawal.`;
+const description = `Distribute component is a component for making the link for token airdrop.`;
 
 export default function Page() {
   return (

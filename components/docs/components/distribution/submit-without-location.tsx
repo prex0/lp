@@ -61,7 +61,7 @@ export const DistributeSubmitExample = () => {
           </DistributionSubmitAmountForm>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Amount per claim</label>
+          <label className="block text-sm font-medium text-gray-700">Amount per drop</label>
           <DistributionSubmitAmountPerWithdrawalForm>
             <AmountFormInput/>
           </DistributionSubmitAmountPerWithdrawalForm>
@@ -80,9 +80,7 @@ export const DistributeSubmitExample = () => {
 `;
 
 const description = `DistributionSubmit component is a component for making the link for token airdrop.
-You can set the total amount to deposit, the amount per withdrawal, and the expiration of the link.
-You can also specify the range of location information to enable the receive button at the time of receipt.
-`;
+You can set the total amount to deposit, the amount per withdrawal, and the expiration of the link.`;
 
 function getURL() {
   return `${window.location.origin}/distribute/receive`;
@@ -125,7 +123,7 @@ export const DistributeSubmitExample = () => {
             </div>
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Amount per claim
+                Amount per drop
               </label>
               <DistributionSubmitAmountPerWithdrawalForm>
                 <AmountFormInput />
