@@ -50,7 +50,7 @@ export function LeftSidebar() {
               to="/docs/components/link-transfer"
             />
             <SubMenuItem title="Swap" to="/docs/components/swap" />
-            <SubMenuItem title="Distribute" to="/docs/components/distribute" />
+            <SubMenuItem title="Drops" to="/docs/components/distribute" />
             <SubMenuItem title="History" to="/docs/components/history" />
             <SubMenuItem
               title="Shared Wallet"

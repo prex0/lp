@@ -31,7 +31,7 @@ export function RequestListExample() {
   return (
     <ComponentDetail
       id="request-list"
-      title="Request List"
+      title="<DistributionHistory />"
       description={description}
     >
       <PreviewComponent code={Code}>

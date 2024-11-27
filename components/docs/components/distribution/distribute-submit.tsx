@@ -14,7 +14,7 @@ import {
   DistributionSubmitExpirationInput,
   DistributionSubmitLocationInput,
   DistributionSubmitAmountForm,
-  DistributionSubmitAmountPerWithdrawalForm,
+  DistributionSubmitAmountPerDropForm,
 } from "@prex0/uikit/distribute";
 import { PreviewComponent } from "../../preview/preview";
 import { ComponentDetail } from "../common/ComponentDetail";
@@ -40,7 +40,7 @@ function getURL() {
 export const DistributeSubmitExample = () => {
   return (
     <div className='max-w-md mx-auto p-4'>
-      <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
+      <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL} defaultExpirationIn={'1 days'}>
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">Name</label>
           <DistributionSubmitNameInput className="w-full" />
@@ -60,7 +60,7 @@ export const DistributeSubmitExample = () => {
           </DistributionSubmitAmountForm>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Amount per claim</label>
+          <label className="block text-sm font-medium text-gray-700">Amount per drop</label>
           <DistributionSubmitAmountPerWithdrawalForm>
             <AmountFormInput/>
           </DistributionSubmitAmountPerWithdrawalForm>
@@ -78,8 +78,8 @@ export const DistributeSubmitExample = () => {
 
 `;
 
-const description = `DistributionSubmit component is a component for making the link for token airdrop.
-You can set the total amount to deposit, the amount per withdrawal, and the expiration of the link.
+const description = `DistributionSubmit component is a component for making the drop link.
+You can set the total amount to deposit, the amount per drop, and the expiration of the link.
 You can also specify the range of location information to enable the receive button at the time of receipt.
 `;
 
@@ -91,12 +91,16 @@ export const DistributeSubmitExample = () => {
   return (
     <ComponentDetail
       id="distribute-submit"
-      title="Distribute Submit"
+      title="<DistributionSubmit />"
       description={description}
     >
       <PreviewComponent code={DistributeSubmitCode}>
         <div className="max-w-md mx-auto p-4">
-          <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
+          <DistributionSubmit
+            token={USDC_TOKEN_ARBITRUM}
+            getURL={getURL}
+            defaultExpirationIn={"1 days"}
+          >
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
                 Name
@@ -124,11 +128,11 @@ export const DistributeSubmitExample = () => {
             </div>
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Amount per claim
+                Amount per drop
               </label>
-              <DistributionSubmitAmountPerWithdrawalForm>
+              <DistributionSubmitAmountPerDropForm>
                 <AmountFormInput />
-              </DistributionSubmitAmountPerWithdrawalForm>
+              </DistributionSubmitAmountPerDropForm>
             </div>
             <div className="mb-4">
               <DistributionSubmitLocationInput

@@ -7,11 +7,11 @@ export function ComponentDistributeList() {
       <div>
         <a href="#list-title">
           <h1 className="text-4xl font-bold mb-4 text-white" id="list-title">
-            Distribution List
+            Drop Link List
           </h1>
         </a>
         <p className="text-gray-400 text-lg">
-          How to display a list of distributions.
+          How to display a list of drop links.
         </p>
       </div>
 

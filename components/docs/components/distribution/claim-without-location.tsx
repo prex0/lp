@@ -72,7 +72,7 @@ export function ClaimDistributeExample() {
 }
 `;
 
-const description = `This is an example of actually receiving tokens from a distribution link.`;
+const description = `This is an example of actually receiving tokens from a drop link.`;
 
 export function ClaimDistributeExample() {
   const { toast } = useToast();
@@ -87,7 +87,7 @@ export function ClaimDistributeExample() {
   return (
     <ComponentDetail
       id="claim-distribute"
-      title="Claim Distribute"
+      title="<DistributionReceive />"
       description={description}
     >
       <PreviewComponent code={Code}>

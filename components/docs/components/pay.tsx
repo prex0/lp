@@ -42,8 +42,8 @@ export function PayExample() {
     <div>
       <Transfer
         token={USDC_TOKEN_ARBITRUM}
-        toAddress="0x0000000000000000000000000000000000000000"
-        amount="10"
+        defaultToAddress="0x0000000000000000000000000000000000000000"
+        defaultAmount="10"
         onSuccess={onSuccess}
       >
         <TransferButton>
@@ -82,8 +82,8 @@ export function PayExample() {
       <div className="w-80">
         <Transfer
           token={USDC_TOKEN_ARBITRUM}
-          toAddress="0x0000000000000000000000000000000000000000"
-          amount="10"
+          defaultToAddress="0x0000000000000000000000000000000000000000"
+          defaultAmount="10"
           onSuccess={onSuccess}
         >
           <TransferButton>
