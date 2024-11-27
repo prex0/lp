@@ -41,8 +41,8 @@ export function TransferExample() {
     <div>
       <TransferCard
         token={USDC_TOKEN_ARBITRUM}
-        toAddress="0xa234567890123000000000000000000000000002"
-        amount=""
+        defaultToAddress="0xa234567890123000000000000000000000000002"
+        defaultAmount=""
         onSuccess={onSuccess}
       />
       <Toaster />
@@ -75,8 +75,8 @@ export function TransferCardExample() {
       <div className="w-[320px]">
         <TransferCard
           token={USDC_TOKEN_ARBITRUM}
-          toAddress="0xa234567890123000000000000000000000000002"
-          amount=""
+          defaultToAddress="0xa234567890123000000000000000000000000002"
+          defaultAmount=""
           onSuccess={onSuccess}
         />
         <Toaster />

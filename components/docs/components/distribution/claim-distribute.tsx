@@ -91,7 +91,7 @@ export function ClaimDistributeExample() {
   return (
     <ComponentDetail
       id="claim-distribute"
-      title="Claim Distribute"
+      title="<DistributionReceive />"
       description={description}
     >
       <PreviewComponent code={ClaimDistributeCode}>

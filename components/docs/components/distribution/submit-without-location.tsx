@@ -13,7 +13,7 @@ import {
   DistributionSubmitError,
   DistributionSubmitExpirationInput,
   DistributionSubmitAmountForm,
-  DistributionSubmitAmountPerWithdrawalForm,
+  DistributionSubmitAmountPerDropForm,
   DistributionSubmitShare,
 } from "@prex0/uikit/distribute";
 import { PreviewComponent } from "../../preview/preview";
@@ -41,7 +41,7 @@ function getURL() {
 export const DistributeSubmitExample = () => {
   return (
     <div className='max-w-md mx-auto p-4'>
-      <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
+      <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL} defaultExpirationIn="7 days">
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">Name</label>
           <DistributionSubmitNameInput className="w-full" />
@@ -80,7 +80,7 @@ export const DistributeSubmitExample = () => {
 `;
 
 const description = `DistributionSubmit component is a component for making the link for token airdrop.
-You can set the total amount to deposit, the amount per withdrawal, and the expiration of the link.`;
+You can set the total amount to deposit, the amount per drop, and the expiration of the link.`;
 
 function getURL() {
   return `${window.location.origin}/distribute/receive`;
@@ -90,12 +90,16 @@ export const DistributeSubmitExample = () => {
   return (
     <ComponentDetail
       id="distribute-submit"
-      title="Distribute Submit"
+      title="<DistributionSubmit />"
       description={description}
     >
       <PreviewComponent code={DistributeSubmitCode}>
         <div className="max-w-md mx-auto p-4">
-          <DistributionSubmit token={USDC_TOKEN_ARBITRUM} getURL={getURL}>
+          <DistributionSubmit
+            token={USDC_TOKEN_ARBITRUM}
+            getURL={getURL}
+            defaultExpirationIn="7 days"
+          >
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
                 Name
@@ -125,9 +129,9 @@ export const DistributeSubmitExample = () => {
               <label className="block text-sm font-medium text-gray-700">
                 Amount per drop
               </label>
-              <DistributionSubmitAmountPerWithdrawalForm>
+              <DistributionSubmitAmountPerDropForm>
                 <AmountFormInput />
-              </DistributionSubmitAmountPerWithdrawalForm>
+              </DistributionSubmitAmountPerDropForm>
             </div>
             <DistributionSubmitError className="mb-4" />
             <DistributionSubmitButton text="Submit" />

@@ -56,8 +56,8 @@ export function TransferExample() {
     <div>
       <Transfer
         token={USDC_TOKEN_ARBITRUM}
-        toAddress="0xa234567890123000000000000000000000000002"
-        amount=""
+        defaultToAddress="0xa234567890123000000000000000000000000002"
+        defaultAmount=""
         onSuccess={onSuccess}
       >
         <div className="flex flex-col gap-4">
@@ -114,8 +114,8 @@ export function TransferExample() {
       <div className="w-[316px]">
         <Transfer
           token={USDC_TOKEN_ARBITRUM}
-          toAddress="0xa234567890123000000000000000000000000002"
-          amount=""
+          defaultToAddress="0xa234567890123000000000000000000000000002"
+          defaultAmount=""
           onSuccess={onSuccess}
         >
           <div className="flex flex-col gap-4">

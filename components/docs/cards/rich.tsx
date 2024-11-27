@@ -42,7 +42,7 @@ export function RichTransferExample() {
       <RichTransferCard
         getURL={() => \`\${window.location.origin}/docs/components/claim?openExternalBrowser=1\`}
         token={USDC_TOKEN_ARBITRUM}
-        amount=""
+        defaultAmount=""
         onSuccess={onSuccess}
       />
       <Toaster />
@@ -76,7 +76,7 @@ export function RichTransferCardExample() {
         <RichTransferCard
           getURL={() => `${window.location.origin}/docs/components/claim`}
           token={USDC_TOKEN_ARBITRUM}
-          amount=""
+          defaultAmount=""
           onSuccess={onSuccess}
         />
         <Toaster />
