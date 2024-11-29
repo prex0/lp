@@ -69,6 +69,14 @@ export function LeftSidebar() {
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
+      <SidebarGroup>
+        <SidebarGroupLabel>Resources</SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            <ExternalLink title="Status" to={"https://status.prex0.com"} />
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
     </>
   );
 }
@@ -84,6 +92,23 @@ function SubMenuItem({ title, to }: { title: string; to: string }) {
         <Link
           key={to}
           href={to}
+          className="block px-3 py-2 text-sm text-gray-500 hover:bg-gray-800 rounded-md"
+        >
+          {title}
+        </Link>
+      </SidebarMenuButton>
+    </SidebarMenuItem>
+  );
+}
+
+function ExternalLink({ title, to }: { title: string; to: string }) {
+  return (
+    <SidebarMenuItem>
+      <SidebarMenuButton asChild>
+        <Link
+          href={to}
+          target="_blank"
+          rel="noopener noreferrer"
           className="block px-3 py-2 text-sm text-gray-500 hover:bg-gray-800 rounded-md"
         >
           {title}
