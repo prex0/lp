@@ -13,7 +13,7 @@
     "fix:prettier": "prettier \"app/**/*.tsx\" \"components/**/*.tsx\" --write"
   },
   "dependencies": {
-    "@prex0/uikit": "^0.6.0",
+    "@prex0/uikit": "^0.6.2",
     "@radix-ui/react-collapsible": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-icons": "^1.3.0",

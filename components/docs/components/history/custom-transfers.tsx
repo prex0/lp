@@ -6,6 +6,7 @@ import {
   TransferHistoryItemCustomComponentReact,
   TransferHistoryItems,
 } from "@prex0/uikit/history";
+import { Avatar } from "@prex0/uikit/identity";
 import { PreviewComponent } from "../../preview/preview";
 import { ComponentDetail } from "../common/ComponentDetail";
 import { formatUnits, isAddressEqual } from "viem";
@@ -58,6 +59,7 @@ const CustomHistoryItemContent = ({
         className={\`\${className} bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 rounded-lg shadow-lg\`}
       >
         <div className="flex justify-between text-white font-bold">
+          <Avatar address={item.sender} size={32} />
           <div>Enviado a {item.recipientName}.</div>
           <div>
             {formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}
@@ -150,11 +152,12 @@ const CustomHistoryItemContent = ({
 
   if (isAddressEqual(item.sender, me)) {
     return (
-      <div
-        className={`${className} bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 rounded-lg shadow-lg`}
-      >
-        <div className="flex justify-between text-white font-bold">
-          <div>Enviado a {item.recipientName}.</div>
+      <div className={`${className} p-4 rounded-lg shadow-lg`}>
+        <div className="flex justify-between items-center text-white font-bold gap-4">
+          <div className="flex items-center gap-2">
+            <Avatar address={item.sender} className="rounded-full" size={32} />
+            <div>Enviado a {item.recipientName}.</div>
+          </div>
           <div>
             {formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}
           </div>
@@ -173,11 +176,12 @@ const CustomHistoryItemContent = ({
     );
   } else if (isAddressEqual(item.recipient, me)) {
     return (
-      <div
-        className={`${className} bg-gradient-to-r from-green-400 via-blue-500 to-indigo-500 p-4 rounded-lg shadow-lg`}
-      >
-        <div className="flex justify-between text-white font-bold">
-          <div>Recibido de {item.senderName}.</div>
+      <div className={`${className} p-4 rounded-lg shadow-lg`}>
+        <div className="flex justify-between items-center text-white font-bold gap-4">
+          <div className="flex items-center gap-2">
+            <Avatar address={item.sender} className="rounded-full" size={32} />
+            <div>Recibido de {item.senderName}.</div>
+          </div>
           <div>
             {formatUnits(BigInt(item.amount), token.decimals)} {token.symbol}
           </div>
