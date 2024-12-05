@@ -34,6 +34,10 @@ export function GettingStartedEIP1193Page() {
           . The example implementation uses RainbowKit to enable operation with
           wallets other than MetaMask.
         </p>
+        <p className="text-gray-300">
+          Some components are designed to work with passkey wallets. Not all
+          components are available.
+        </p>
       </div>
     </div>
   );
