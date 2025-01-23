@@ -356,10 +356,10 @@ export function LandingPageComponent() {
       <div className="container mx-auto px-4 py-8 md:py-16 bg-black">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="lg:w-1/2 space-y-6">
-            <h1 className="text-2xl md:text-4xl font-bold tracking-tight sm:text-5xl mb-4 md:mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:text-6xl mb-4 md:mb-6">
               Prex: Like Stripe for Crypto
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
+            <p className="text-2xl md:text-3xl text-gray-300 mb-6 md:mb-8">
               Launch your own Uniswap-like app on mainnet in minutes, powered by
               AI and blockchain innovation.
             </p>
