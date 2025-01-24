@@ -22,6 +22,7 @@ import {
   Zap,
   Code,
 } from "lucide-react";
+import { PricingSection } from "./pricing-section";
 
 const CustomGroup = ({ data }: { data: { width: number; height: number } }) => (
   <div
@@ -422,6 +423,8 @@ export function LandingPageComponent() {
             />
           </div>
         </div>
+
+        <PricingSection />
       </div>
     </div>
   );
