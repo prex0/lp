@@ -23,7 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       chainId={CHAIN_ID_ARBITRUM}
       policyId={process.env.NEXT_PUBLIC_POLICY_ID || 'test'}
       apiKey={process.env.NEXT_PUBLIC_API_KEY || 'test'}
-      tokens={[YOUR_TOKEN_ARBITRUM]}
+      defaultTokens={[YOUR_TOKEN_ARBITRUM]}
       dryRun={process.env.NEXT_PUBLIC_DRY_RUN === 'true'}
     >
       {children}

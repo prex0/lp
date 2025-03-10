@@ -29,7 +29,12 @@ export function PricingSection() {
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Free</CardTitle>
-            <div className="text-3xl font-bold">$0<span className="text-lg font-normal text-muted-foreground">/month</span></div>
+            <div className="text-3xl font-bold">
+              $0
+              <span className="text-lg font-normal text-muted-foreground">
+                /month
+              </span>
+            </div>
             <CardDescription>Perfect for getting started</CardDescription>
           </CardHeader>
           <CardContent>
@@ -45,10 +50,7 @@ export function PricingSection() {
             </ul>
           </CardContent>
           <CardFooter>
-            <a 
-              href="https://dashboard.prex0.com"
-              className="w-full"
-            >
+            <a href="https://dashboard.prex0.com" className="w-full">
               <Button className="w-full" variant="outline">
                 Get Started
               </Button>
@@ -61,7 +63,12 @@ export function PricingSection() {
           <CardHeader className="text-center">
             <Badge className="mb-2 mx-auto">Popular</Badge>
             <CardTitle>Basic</CardTitle>
-            <div className="text-3xl font-bold">$20<span className="text-lg font-normal text-muted-foreground">/month</span></div>
+            <div className="text-3xl font-bold">
+              $20
+              <span className="text-lg font-normal text-muted-foreground">
+                /month
+              </span>
+            </div>
             <CardDescription>For growing projects</CardDescription>
           </CardHeader>
           <CardContent>
@@ -81,13 +88,8 @@ export function PricingSection() {
             </ul>
           </CardContent>
           <CardFooter>
-            <a 
-              href="https://dashboard.prex0.com"
-              className="w-full"
-            >
-              <Button className="w-full">
-                Get Started
-              </Button>
+            <a href="https://dashboard.prex0.com" className="w-full">
+              <Button className="w-full">Get Started</Button>
             </a>
           </CardFooter>
         </Card>
@@ -96,7 +98,12 @@ export function PricingSection() {
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Pro</CardTitle>
-            <div className="text-3xl font-bold">$980<span className="text-lg font-normal text-muted-foreground">/month</span></div>
+            <div className="text-3xl font-bold">
+              $980
+              <span className="text-lg font-normal text-muted-foreground">
+                /month
+              </span>
+            </div>
             <CardDescription>For enterprise & scale</CardDescription>
           </CardHeader>
           <CardContent>
@@ -120,10 +127,7 @@ export function PricingSection() {
             </ul>
           </CardContent>
           <CardFooter>
-            <a 
-              href="mailto:support@prex0.com"
-              className="w-full"
-            >
+            <a href="mailto:support@prex0.com" className="w-full">
               <Button className="w-full" variant="outline">
                 Contact Sales
               </Button>
@@ -133,4 +137,4 @@ export function PricingSection() {
       </div>
     </div>
   );
-} 
+}

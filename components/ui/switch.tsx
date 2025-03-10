@@ -1,5 +1,5 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
 interface SwitchProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
@@ -15,7 +15,7 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
       {...props}
     />
   )
-)
-Switch.displayName = "Switch"
+);
+Switch.displayName = "Switch";
 
-export { Switch } 
+export { Switch };
